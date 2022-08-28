@@ -5,7 +5,7 @@ const { application } = require('express');
 require(`dotenv`).config();
 
 // CONTROLLER IMPORT
-
+const pageController = require(`./controllers/pageController.js`);
 
 // CONFIGS
 const app = express();
@@ -17,7 +17,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'));
 
 // CONTROLLER ROUTING
-
+app.use('/index', pageController)
 
 // 
 app.listen(PORT,() => console.log(`Listening on port: ${PORT}`));
