@@ -1,0 +1,12 @@
+Name of Web: 
+
+
+
+
+Jobs: 
+- Front end >> css >> html >> Joey
+- Backend >> mongo >> routing >> JS >> Model >> Tim and Tullie
+- MVP : index page of content >> most upvotes will be on top >> comment section  >> about page >> edit / delete 
+
+
+Nice to have >>  most upvotes will be on top >> search bar >> story page >> authentication/users >> 
