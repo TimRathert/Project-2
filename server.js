@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { application } = require('express');
 require(`dotenv`).config();
+require('./config/db.controller')
 
 // CONTROLLER IMPORT
 const pageController = require(`./controllers/pageController.js`);
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs')
 
 //MIDDLEWEAR
 app.use(express.static('public'));
+
 
 // CONTROLLER ROUTING
 app.use('/index', pageController)
