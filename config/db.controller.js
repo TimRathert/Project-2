@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // MONGODB PATH
-// const mongoURI =
+mongoURI = process.env.MONGODB_URI;
 // ^ HERE ^
 
 mongoose.connect(mongoURI);
