@@ -31,8 +31,8 @@ router.post('/', async (req, res, next) => {
 // SHOW ROUTE
 router.get('/images/:imageId', async (req, res, next) => {
     try{
-        const image = await db.Comment.findById(req.params.imageId)
-        const comments = await db.Image.find({image: req.params.imageId})
+        const image = await db.Image.findById(req.params.imageId)
+        const comments = await db.Comment.find({image: req.params.imageId})
     let context = {
         thisImage: image,
         thisComments: comments
