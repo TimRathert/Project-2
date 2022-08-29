@@ -16,4 +16,33 @@
     color: black;
   }
 
+  .logIn:hover {
+    background-color: rgb(104, 0, 0);
+    border-radius: 14%;
+  }
+
+  .logIn {
+    cursor: pointer;
+  }
+
+  .navbar-brand:hover {
+    background-color: rgb(104, 0, 0);
+    border-radius: 14%;
+  }
+
+  .navbar-brand {
+    cursor: pointer;
+  }
+
+  .logIn:active {
+    box-shadow: 0 5px rgb(124, 128, 127);
+    transform: translateY(4px);
+  }
+
+  .navbar-brand:active {
+      box-shadow: 0 5px rgb(124, 128, 127);
+      transform: translateY(4px);
+  }
+
+
  

@@ -8,14 +8,11 @@
     <%- include ('../partials/head') %>
 </head>
 <body>
-    <div>
-        <% for( let i = 0; i<images.length; i++){ %>
-            <% const firstImage = images[i] %>
-            <a href="/images/<%=firstImage._id%>"><img src="<%= firstImage.url %>"</a> 
-        <% } %> 
-    </div>
+
+    <section>
+        <div>
+            <%= images.url %>
+        </div>
+    </section>
 </body>
 </html>
-
-
-
