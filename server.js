@@ -19,9 +19,8 @@ app.use(express.static('public'));
 
 
 // CONTROLLER ROUTING
-app.use('/home', mainController)
+app.use('/', mainController)
 
-app.get('/', )
 
 // 
 app.listen(PORT,() => console.log(`Listening on port: ${PORT}`));
