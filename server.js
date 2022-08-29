@@ -17,8 +17,11 @@ app.set('view engine', 'ejs')
 //MIDDLEWEAR
 app.use(express.static('public'));
 
+
 // CONTROLLER ROUTING
-app.use('/index', pageController)
+app.use('/home', pageController)
+
+app.get('/', )
 
 // 
 app.listen(PORT,() => console.log(`Listening on port: ${PORT}`));
