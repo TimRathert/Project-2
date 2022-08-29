@@ -1,4 +1,4 @@
-Name of Web: Instagramafication 
+Name of Web: Instagramification 
 
 
 ** ask about how to merge databases **

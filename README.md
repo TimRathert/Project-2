@@ -13,3 +13,12 @@ GA SEIR 725 - Project 2
 
 4) once that is done, we can all pull the development branch to our own branches
 --> (while on your own branch) git pull origin development
+
+
+WELCOME TO INSTAGRAMIFICATION
+
+this app is a recreation redefining the original app Instagram.
+through instagramification you will be able to upload pictures/comments and edit of your choice.
+
+Our homepage will display pictures, comments AND likes.
+whoever
