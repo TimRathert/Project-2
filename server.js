@@ -1,8 +1,9 @@
 // Dependencies
 const express = require('express');
 const mongoose = require('mongoose');
-const app = require('express');
+const { application } = require('express');
 require(`dotenv`).config();
+require('./config/db.controller')
 
 // CONTROLLER IMPORT
 const pageController = require(`./controllers/pageController.js`);
