@@ -4,15 +4,14 @@ const ImageSchema = new mongoose.Schema (
     {
         url: {
             type: String,
-            required: [true, "You must provide an image"],
+            required: [true, "You must provide an image"]
         },
-        description: String,
-        likes: Number,
+        description: {type:String},
+        likes: {type: Number},
         user: {
             type: mongoose.Types.ObjectId,
             ref: 'User'
         }
-        
     },
     { timestamps: true },
 );
