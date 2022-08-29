@@ -1,0 +1,19 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+  .container-fluid .logIn{
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  body {
+    background-color: rgb(124, 128, 127);
+  }
+
+  h1 {
+    text-align: center;
+    color: black;
+  }
+
+ 
