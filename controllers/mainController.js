@@ -31,8 +31,9 @@ router.post('/', async (req, res, next) => {
 // SHOW ROUTE
 router.get('/images/:imageId', async (req, res, next) => {
     try{
-        const image = await db.Image.findById(req.params.imageId)
+        const image = await db.Image.findById(req.params.imageId)     
         const comments = await db.Comment.find({image: req.params.imageId})
+        
     let context = {
         thisImage: image,
         thisComments: comments
@@ -61,7 +62,53 @@ router.get('/home', async (req, res, next) => {
     }
 })
 
-router.get('/', (req,res) => {
+// DESTROY
+router.delete('/images/:imageId', async (req,res, next) => {
+    try{
+        const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
+        console.log(deletedImage);
+        res.redirect('/home')
+    }
+    catch(err){
+        console.log(err);
+        req.error = err;
+        return next();
+    }
+})
+
+// EDIT ROUTE
+router.get('/images/:imageId/edit', async (req,res,next) => {
+    try{
+        const updatedImage = await db.Image.findById(req.params.imageId);
+        console.log(updatedImage);
+        res.render('pages/edit', updatedImage)
+    }
+    catch(err){
+        console.log(err);
+        req.error = err;
+        return next();
+    }
+})
+
+// UPDATE ROUTE
+router.put('/images/:imageId', async (req, res, next) => {
+    try{
+        const newImageData = req.body;
+        await db.Image.findByIdAndUpdate(
+            req.params.imageId, 
+            newImageData, 
+            {new: true});
+        res.redirect(`/images/${req.params.imageId}`);
+    }
+    catch(err){
+        console.log(err);
+        req.error = err;
+        return next();
+    }
+})
+
+//REDIRECT TO HOME
+router.get('/*', (req,res) => {
     res.redirect('/home');
 })
 
