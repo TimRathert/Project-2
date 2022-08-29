@@ -17,6 +17,7 @@ app.set('view engine', 'ejs')
 //MIDDLEWEAR
 app.use(express.static('public'));
 
+
 // CONTROLLER ROUTING
 app.use('/index', pageController)
 
