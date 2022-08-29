@@ -11,10 +11,16 @@
 
     <section>
         <div>
-           <img src="<%= thisImage.url %>">
-           <%= thisComments[0].content %>
-        
+
+           <img src = "<%= thisImage.url %>">
+           <p><%= thisImage.description %></p>
+           <p><%= thisImage.likes %></p>
+           <p><%= thisImage.user %></p>
+
         </div>
-    </section>
+        <div>
+        <p><%= thisComments[0].content %></p>
+        </div>
+     </section>
 </body>
 </html>
