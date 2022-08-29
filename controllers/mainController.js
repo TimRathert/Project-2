@@ -9,13 +9,37 @@ router.use(express.urlencoded({ extended: false }));
 
 // ROUTES
 
-// SHOW ROUTE
-router.get('/:imageId', async (req, res, next) => {
+
+//NEW ROUTE
+router.get('/new', (req, res) => {
+    res.render('new')
+})
+//CREATE ROUTE
+router.post('/', async (req, res, next) => {
+    const newImage = req.body;
     try{
-    let context = await db.Image.findById(req.params.imageId);
-    res.render('pages/show', context)
+        const createdImage = await db.Image.create(newImage)
     }
     catch(err){
+        console.log(err)
+        require.error = err;
+        return next();
+    }
+})
+
+
+// SHOW ROUTE
+router.get('/images/:imageId', async (req, res, next) => {
+    try{
+        const image = await db.Comment.findById(req.params.imageId)
+        const comments = await db.Image.find({image: req.params.imageId})
+    let context = {
+        thisImage: image,
+        thisComments: comments
+    };
+    res.render('pages/show', context)
+
+    }    catch(err){
         console.log(err);
         require.error = err;
         return next();
@@ -24,10 +48,11 @@ router.get('/:imageId', async (req, res, next) => {
 
 
 // INDEX ROUTE
-router.get('/', async (req, res, next) => {
+router.get('/home', async (req, res, next) => {
     try{
-    let context = await db.Image.find({})
-    res.render('pages/home', context)
+        const allImages = await db.Image.find({})
+        let context = {images: allImages}
+        res.render('pages/home', context)
     }
     catch(err){
         console.log(err);
@@ -36,6 +61,9 @@ router.get('/', async (req, res, next) => {
     }
 })
 
+router.get('/', (req,res) => {
+    res.redirect('/home');
+})
 
 
 module.exports = router
