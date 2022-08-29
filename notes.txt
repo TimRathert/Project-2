@@ -1,0 +1,20 @@
+Name of Web: Instagramafication 
+
+
+** ask about how to merge databases **
+
+Jobs: 
+- Front end >> css >> html >> Joey
+- Backend >> mongo >> routing >> JS >> Model >> Tim and Tullie
+- MVP : index page of content >> most upvotes will be on top >> comment section  >> about page >> edit / delete 
+- wireframes >> calendar on milestone
+
+
+
+Nice to have >>  most upvotes will be on top >> search bar >> story page >> authentication/users >> 
+
+TO-DO days: 
+Monday >> envision how our layout would like on day 1 >> wireframes >> map for our site >>basic routing >> database setup >> idea for homepage >>basic seed file  
+Tuesday >> CRUD routes for pictures >> CRUD for comments 
+Wednesday >>  Have full CRUD ready and WORKING 
+Thursday >> Stretch goals
