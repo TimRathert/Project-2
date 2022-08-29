@@ -6,7 +6,7 @@ require(`dotenv`).config();
 require('./config/db.controller')
 
 // CONTROLLER IMPORT
-const pageController = require(`./controllers/pageController.js`);
+const mainController = require(`./controllers/mainController.js`);
 
 // CONFIGS
 const app = express();
@@ -19,7 +19,7 @@ app.use(express.static('public'));
 
 
 // CONTROLLER ROUTING
-app.use('/home', pageController)
+app.use('/home', mainController)
 
 app.get('/', )
 
