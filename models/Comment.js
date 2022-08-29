@@ -6,7 +6,6 @@ const commentSchema = new mongoose.Schema (
             type: mongoose.Schema.Types.ObjectId,
             ref: 'comment'
         },
-        timestap: Date,
         content: String,
         image: {
             type: mongoose.Types.ObjectId,
