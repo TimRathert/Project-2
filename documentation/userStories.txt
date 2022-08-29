@@ -1,0 +1,15 @@
+User Stories:
+
+1) 
+User loads Instagramafication in their browser and is met with images. Attached to each image are a few comments (<3). As the browse pictures, if they see one they like they can 'like' it by clicking the like button. 
+
+If they want to add a comment or see more conversation about an image, they can click on the image and be taken to a show page. 
+
+When the user wishes to continue, they can go back to the home page and begin exploring additional images.
+
+
+
+
+2) 
+User loads the page and wants to see images of boats. The user searches for boats and is redirected to an index page showing images that contain "boats" in the description.
+The user can click on any image, just like the home screen, to further explore the conversation on each image. This directs the user to the show page for that image. The user can comment on the picture. Once submitted, the user realizes the error of their ways and wishes to edit the comment. The user updates the contents of their comment and then submits the changes. The world will now never know about the users embarassing gaffe.
