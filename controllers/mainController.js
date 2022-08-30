@@ -11,14 +11,15 @@ router.use(express.urlencoded({ extended: false }));
 
 
 //NEW ROUTE
-router.get('/new', (req, res) => {
+router.get('/images/new', (req, res) => {
     res.render('pages/create.ejs')
 })
 //CREATE ROUTE
 router.post('/images', async (req, res, next) => {
-    const newImage = req.body;
     try{
+        const newImage = req.body;
         const createdImage = await db.Image.create(newImage)
+        res.redirect(`/images/${createdImage._id}`)
     }
     catch(err){
         console.log(err)
