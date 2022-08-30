@@ -69,8 +69,7 @@
     height: 200px;
     color: white;
     font-size: 40px;
-    word-wrap: break-word;
-    width: 100%;
+    width: 20%;
   }
 
   #url.form-control {
@@ -78,32 +77,37 @@
     height: 200px;
     color: white;
     font-size: 40px;
-    word-wrap: break-word;
     width: 100%;
   }
 
-  .input-group-prepend {
-    width: 100%;
+  .container{
+    display: flex;
+    align-items:flex-end;
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: center;
+    
   }
   .input-group{
     display: block;
   }
   #image-input-one {
     padding: 5%;
+   
   }
 
   #image-input-two {
     padding: 5%;
-    
-    
+   
   }
 
-  .btn.button.btn-primary.btn-lg {
+  #create-btn {
     background-color: rgb(104, 0, 0);
-   }
-  
-  #show-page {
-    background-color: rgb(124, 128, 127);
+    font-size: 12px;
+    width: 20%;
+    margin-left: 436px;
   }
 
  .show-page-image{
@@ -112,12 +116,26 @@
 
   #show-page-delete {
     background-color: red;
+    margin: 10px;
+    margin-top: 90px;
   }
 
   #show-comment-btn {
     background-color: #0077cd;
     border-radius: 20%;
   }
-  
 
- 
+  .content-show {
+    padding: 10px;
+  }
+
+  .content-text {
+    padding: 10px;
+  }
+
+  #edit-button {
+    background-color: rgb(104, 0, 0);
+    font-size: 12px;
+    width: 20%;
+    margin-left: 465px;
+  }
