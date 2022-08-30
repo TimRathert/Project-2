@@ -21,40 +21,6 @@ Thursday >> Stretch goals
 
 
 
-  .form-control-login-two {
-    background-color: #0077cd;
-    height: 90%;
-    color: white;
-    font-size: 20px;
-    width: 70%;
-  }
-
-  .input-group-login-two {
-    width: 80%;
-    text-align: center;
-  }
-
-  form {
-    text-align: center;
-  }
-
-  .register {
-    margin-top: 30px;
-  }
-
-  #login-button {
-    background-color: rgb(123, 28, 28);
-    font-size: 12px;
-    width: 80px;
-    text-align: center;
-    padding: 0;
-    height: 20px;
-    margin-top: 20px;
-  }
-
-  #login-button:hover {
-    background-color: #0077cd;
-  }
 
 
 
