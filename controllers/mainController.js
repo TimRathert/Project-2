@@ -33,10 +33,12 @@ router.get('/images/:imageId', async (req, res, next) => {
     try{
         const image = await db.Image.findById(req.params.imageId)     
         const comments = await db.Comment.find({image: req.params.imageId})
+        const user = await db.User.findById(image.user)
         
     let context = {
         thisImage: image,
-        thisComments: comments
+        thisComments: comments,
+        thisUser: user
     };
     res.render('pages/show.ejs', context)
 
