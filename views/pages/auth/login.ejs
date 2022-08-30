@@ -7,36 +7,47 @@
     <section>
       <div>
         <h1>Login</h1>
+
+        <main class="container">
+        <div class="input-group input-group-lg">
+        <form action="/login" method="POST" class="form">
+          <div class="input-group-prepend" id="image-input-one">
+            <label for="url" class="input-group-login">Username</label>
+
         <form action="/auth/login" method="POST">
           <div>
             <label>Username</label>
             <div>
+
               <input
                 name="username"
                 type="text"
                 placeholder="username"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                class="form-control-login"
               />
             </div>
-          </div>
-          <div >
-            <label>Password</label>
-            <div>
+          <div class="input-group input-group-lg" id="image-input-two">
+            <label for="password" class="input-group-login-two">Password</label>
               <input
                 name="password"
                 type="password"
                 placeholder="******"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                class="form-control-login-two"
               />
-            </div>
           </div>
           <div>
             <div>
-              <button>Submit</button>
+              <button id="login-button" class="btn button btn-primary btn-lg">Submit</button>
             </div>
           </div>
+          <div class="register">Need an account? <a href="/auth/register"> Click here!</a> </div>
         </form>
-      </div>
     </section>
-    <div>Need an account? <a href="/auth/register"> Click here!</a> </div>
-
+  </div>
+  </main>
   </body>
 </html>

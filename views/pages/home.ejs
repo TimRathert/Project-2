@@ -13,7 +13,7 @@
     <div class="homeImages">
         <% for( let i = 0; i<images.length; i++){ %>
             <% const firstImage = images[i] %>
-            <a href="/images/<%=firstImage._id%>"><img class="image-home" src="<%= firstImage.url %>"height='460px' width="460px"></a> 
+            <a href="/images/<%=firstImage._id%>"><img class="image-home" src="<%= firstImage.url %>" width="460px"></a> 
                 <button type="button" id="like-btn"  class="btn btn-primary btn-lg">♥️</button>
             <% } %> 
     </div>
