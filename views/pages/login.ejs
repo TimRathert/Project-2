@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstantGramification</title>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <main class="container">
+        <div class="input-group input-group-lg">
+          <form action="/login" method="POST" class="form">
+            <div class="input-group-prepend" id="image-input-one"> 
+              <label for="login" class="input-group-text">Username</label>
+                <input 
+                  type="text" 
+                  id="form-control-login" 
+                  aria-label="Sizing example input" 
+                  aria-describedby="inputGroup-sizing-lg" 
+                  placeholder="username"
+                  name="username"
+                  id ="email"
+                />
+            </div>            
+            <div class="input-group input-group-lg" id="image-input-two">
+              <label for="password" class="input-group-text">Password</label>
+              <input 
+                type="text" 
+                id="form-control-login" 
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                placeholder="password"
+                name ="password"
+                id ="password"
+                />
+            </div>
+            <button id = "create-btn" class="btn button btn-primary btn-lg">Sign In</button>
+            </div>
+          </form> 
+      </main>
+    
+</body>
