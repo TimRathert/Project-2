@@ -8,12 +8,7 @@
   }
 
   .homeImages {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-    flex-direction: column;
-    padding: 50px;
+    padding-left: 
   }
 
   body {
@@ -54,44 +49,52 @@
       transform: translateY(4px);
   }
 
-  .container .input-group-text {
+  label.input-group-text {
     background-color: rgb(104, 0, 0);
     color: white;
-    padding: 50px;
+    height: 40px;
+    width: 100%;
   }
 
-  .container .form-control {
+  #description.form-control {
     background-color: #0077cd;
     height: 200px;
     color: white;
     font-size: 40px;
+    word-wrap: break-word;
+    width: 20%;
   }
 
-  .container {
-    padding: 20px;
-    display: flex;
-    align-content: space-around;
-    padding-bottom: 10px;
-    padding-top: 10px;
-  }
-
-  #left-box {
-    background-color: rgb(104, 0, 0);
-    color: white;
-    padding: 50px;
-  }
-
-  #right-box {
+  #url.form-control {
     background-color: #0077cd;
     height: 200px;
     color: white;
     font-size: 40px;
+    word-wrap: break-word;
+    width: 100%;
   }
 
-  #show-container {
-    padding: 20px;
-    display: flex;
-    align-content: space-around;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  .input-group-prepend {
+    width: 100%;
   }
+
+  #image-input-one {
+    padding: 5%;
+  }
+
+  #image-input-two {
+    padding: 5%;
+    
+    
+  }
+
+  .btn.button.btn-primary.btn-lg {
+    background-color: rgb(104, 0, 0);
+  }
+  
+
+
+
+  
+
+ 

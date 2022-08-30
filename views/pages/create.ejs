@@ -10,8 +10,8 @@
 <body>
     <main class="container">
       <div class="input-group input-group-lg">
-        <form action="/images" method="POST">
-          <div class="input-group-prepend"> 
+        <form action="/images" method="POST" class="form">
+          <div class="input-group-prepend" id="image-input-one"> 
             <label for="url" class="input-group-text">New image</label>
               <input 
                 type="text" 
@@ -23,7 +23,7 @@
                 id ="url"
               />
           </div>            
-          <div class="input-group input-group-lg">
+          <div class="input-group input-group-lg" id="image-input-two">
             <label for="description" class="input-group-text">New caption</label>
             <input 
               type="text" 
@@ -35,20 +35,6 @@
               id ="description"
               />
           </div>
-          <div>
-            <label for="user">user (this is placeholder so db works)</label>
-            <input
-              type="text"
-              required="true"
-              name="user"
-              id="user"
-              value="630d1de110ea9c8b613f6e5a"
-              />
-
-            </div>
-          <button class="btn btn-primary btn-lg">Create post</button>
-        </form>  
-
           </div>
         <button class="btn button btn-primary btn-lg">Create post</button>
         </form>
