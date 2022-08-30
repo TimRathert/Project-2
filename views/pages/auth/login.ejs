@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include ('../../partials/head') %>
+  <head>  
+    <%- include("../../partials/head") %>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  </head>  
+  <body>
     <section>
       <h1>Login</h1>
       <div>
       <main class="container">
 
         <div class="input-group input-group-lg">
+        <form action="/auth/login" method="POST" class="form">
+
           <div class="input-group-prepend" id="image-input-one">
             <label for="url" class="input-group-login">Username</label>
             <form action="/auth/login" method="POST" class="form">

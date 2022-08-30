@@ -35,7 +35,7 @@ router.get("/login", function (req, res) {
 router.post('/login', async (req,res,next) => {
     try{
         const checkUser = await User.findOne({ username: req.body.username });
-        console.log(checkUser);
+        //console.log(checkUser);
         if (!checkUser){
             return res.redirect('/auth/register');
         }
@@ -55,7 +55,7 @@ router.post('/login', async (req,res,next) => {
     }
 })
 
-router.get('/auth/logout', async (req, res, next) => {
+router.get('/logout', async (req, res, next) => {
     try{
         await req.session.destroy();
         return res.redirect('/home')

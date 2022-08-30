@@ -2,11 +2,6 @@
     box-sizing: content-box;
   }
 
-  .container-fluid .logIn{
-    text-decoration: none;
-    font-size: 20px;
-  }
-
   .homeImages {
     margin-left: 140px;
   }
@@ -276,4 +271,58 @@
 
   #login-button:hover {
     background-color: #0077cd;
+  }
+
+
+
+
+
+  body{
+  }
+  
+  .container-fluid .logIn{
+      text-decoration: none;
+      font-size: 20px;
+      cursor: pointer;
+      
+  }
+  
+  .logIn {
+  }
+  
+  .navbar-brand{
+      background-color: rgba(0,0,0,0);
+      transition: background-color 1s, border-radius 1s, box-shadow 1s;
+      padding: 5px;
+  
+  }
+  
+  .navbar-brand:hover {
+    background-color: rgba(123, 28, 28, .1);
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    top:50%;
+  }
+  
+  .navbar-brand > img {
+      height: 40px;
+      width: 40px;
+  }
+  
+  a{
+      color: white;
+      transition: color .5s;
+      text-decoration: none;
+  }  
+    
+   a:hover {
+      color: rgba(255,255,255,0.5)
+  }
+    
+  
+  
+  .logIn:active {
+    box-shadow: 0 5px rgb(124, 128, 127);
+    transform: translateY(4px);
   }
