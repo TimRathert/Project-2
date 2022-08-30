@@ -39,9 +39,16 @@ app.use(function (req, res, next) {
     next();
   });
 
+const authRequired = function (req, res, next){
+    if (req.session.currentUser){
+        return next();
+    }
+    return res.redirect('/auth/login')
+};
+
 // CONTROLLER ROUTING
 app.use('/', mainController)
-app.use('/comments', commentController);
+app.use('/comments', authRequired, commentController);
 app.use('/auth', auth_controller);
 
 
