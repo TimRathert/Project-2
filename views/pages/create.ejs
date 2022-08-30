@@ -10,13 +10,42 @@
 <body>
     <main class="container">
       <div class="input-group input-group-lg">
-        <span class="input-group-text" id="inputGroup-sizing-lg">New image</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="image">
-    
-        <div class="input-group input-group-lg">
-        <span class="input-group-text" id="inputGroup-sizing-lg">New caption</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="caption">
-      </div>
+        <form action="/images" method="POST">
+          <div class="input-group-prepend"> 
+            <label for="url" class="input-group-text" id="inputGroup-sizing-lg">New image</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              aria-label="Sizing example input" 
+              aria-describedby="inputGroup-sizing-lg" 
+              placeholder="image"
+              name="url"
+              id ="url"
+              />
+          </div>            
+            <div class="input-group input-group-lg">
+            <label for="description" class="input-group-text" id="inputGroup-sizing-lg">New caption</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              aria-label="Sizing example input" 
+              aria-describedby="inputGroup-sizing-lg" 
+              placeholder="caption"
+              name ="description"
+              id ="description"
+              />
+          </div>
+            <label for="user">user (this is placeholder so db works)</label>
+            <input
+              type="text"
+              required="true"
+              name="user"
+              id="user"
+              default="630d1de110ea9c8b613f6e5a"
+              value="630d1de110ea9c8b613f6e5a"
+              />
+            </div>
+          <button type="button" class="btn btn-primary btn-lg">Create post</button>
+        </form>  
     </main>
-    <button type="button" class="btn btn-primary btn-lg">Create post</button>
 </body>

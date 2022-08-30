@@ -15,7 +15,7 @@ router.get('/new', (req, res) => {
     res.render('pages/create.ejs')
 })
 //CREATE ROUTE
-router.post('/', async (req, res, next) => {
+router.post('/images', async (req, res, next) => {
     const newImage = req.body;
     try{
         const createdImage = await db.Image.create(newImage)
@@ -33,10 +33,12 @@ router.get('/images/:imageId', async (req, res, next) => {
     try{
         const image = await db.Image.findById(req.params.imageId)     
         const comments = await db.Comment.find({image: req.params.imageId})
+        const user = await db.User.findById(image.user)
         
     let context = {
         thisImage: image,
-        thisComments: comments
+        thisComments: comments,
+        thisUser: user
     };
     res.render('pages/show.ejs', context)
 
