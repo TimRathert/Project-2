@@ -8,14 +8,18 @@
         <a class="navbar-brand" href="/home">InstantGrammification
           <img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png">
         </a>
-
+      <% if (user) { %>
         <a href="/images/new">Add new Post</a>
-
         <a href="/popular">Popular Posts</a>
-
+        <a href="/auth/logout">Logout</a>
+        <a href="/about">About</a>  
+      <% } else { %>
+           
+        <a href="/popular">Popular Posts</a>
         <a href="/auth/login">Log In/Register</a>
-
         <a href="/about">About</a>
+        <% }%>
+
       </div>
     </nav>
   </head>

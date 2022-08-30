@@ -2,6 +2,7 @@
 <html lang="en">
   <head>  
     <%- include("../../partials/head") %>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
   </head>  
   <body>
     <section>
@@ -10,7 +11,7 @@
 
         <main class="container">
         <div class="input-group input-group-lg">
-        <form action="/login" method="POST" class="form">
+        <form action="/auth/login" method="POST" class="form">
           <div class="input-group-prepend" id="image-input-one">
             <label for="url" class="input-group-login">Username</label>
 

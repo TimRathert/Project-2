@@ -34,6 +34,10 @@ app.set('view engine', 'ejs')
 //MIDDLEWEAR
 app.use(methodOverride('_method'));
 app.use('/static', express.static('public'))
+app.use(function (req, res, next) {
+    res.locals.user = req.session.currentUser;
+    next();
+  });
 
 // CONTROLLER ROUTING
 app.use('/', mainController)

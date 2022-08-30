@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InstantGramification</title>
-    <%- include ('../partials/head') %>
+    <%- include("../partials/head") %>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
 <body>
     <main class="container">
@@ -35,6 +36,8 @@
               id ="description"
               />
           </div>
+          <input type="hidden" name="user" value="req.session.currentUser.id"/>
+          
           <button id = "create-btn" class="btn button btn-primary btn-lg">Create post</button>
           </div>
         </form> 
