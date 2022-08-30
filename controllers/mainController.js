@@ -115,11 +115,6 @@ router.get('/about', (req, res) => {
     res.render('pages/about.ejs')
 })
 
-// Login/Register
-router.get('/login', (req, res) => {
-    res.render('pages/login.ejs')
-})
-
 // Popular
 router.get('/popular', (req, res) => {
     res.render('pages/popular.ejs')
