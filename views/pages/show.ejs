@@ -26,14 +26,15 @@
         <div>
             
            <img src = "<%= thisImage.url %>">
-           <p><%= thisUser.username %>: <%= thisImage.description %></p>
+           <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
            <p>Likes: <%= thisImage.likes %></p>
         </div>
         <div>
+           
             <ul>
                 <% for( let i = 0; i < thisComments.length; i++ ) { %>
-                    <!-- <style>li {list-style-image: url(<%= thisUser.profImage %>)}</style> -->
-                    <li><%= thisComments[i].user %><%= thisComments[i].content %></li>
+                     
+                    <li><img src = <%= thisComments[i].user.profImage%> width="20px" height="20px"> <%= thisComments[i].user.username%>: <%= thisComments[i].content %></li>
                 <% } %>
             </ul>
         </div>
@@ -51,7 +52,7 @@
             
             
              
-                <input type="hidden" name="username" id="username" value="630d14bde0d3cb80372ea249">
+                <input type="hidden" name="user" id="user" value="630d14bde0d3cb80372ea249">
                 <input type="hidden" name="image" id="image" value="<%= thisImage.id%>">
             </div>
         </form>
