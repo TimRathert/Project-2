@@ -7,11 +7,19 @@ const db = require('../models')
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
+const authRequired = function (req, res, next){
+    if (req.session.currentUser){
+        return next();
+    }
+    return res.redirect('/auth/login')
+};
+
+
 // ROUTES
 
 
 //NEW ROUTE
-router.get('/images/new', (req, res) => {
+router.get('/images/new', authRequired, (req, res) => {
     res.render('pages/create.ejs')
 })
 //CREATE ROUTE
@@ -73,7 +81,8 @@ router.delete('/images/:imageId', async (req,res, next) => {
     
     try{
         const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
-        console.log(deletedImage);
+        const deleteComments = await db.Comment.deleteMany({image: deletedImage})
+        console.log(deletedImage, deleteComments);
         res.redirect('/home')
     }
     catch(err){
