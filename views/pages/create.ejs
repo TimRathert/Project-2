@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstantGrammification</title>
+    <%- include ('../partials/head') %>
+</head>
+<body>
+    <main class="container">
+      <div class="input-group input-group-lg">
+        <form action="/images" method="POST">
+          <div class="input-group-prepend"> 
+            <label for="url" class="input-group-text">New image</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                placeholder="image url"
+                name="url"
+                id ="url"
+              />
+          </div>            
+          <div class="input-group input-group-lg">
+            <label for="description" class="input-group-text">New caption</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              aria-label="Sizing example input" 
+              aria-describedby="inputGroup-sizing-lg" 
+              placeholder="caption"
+              name ="description"
+              id ="description"
+              />
+          </div>
+          <div>
+            <label for="user">user (this is placeholder so db works)</label>
+            <input
+              type="text"
+              required="true"
+              name="user"
+              id="user"
+              value="630d1de110ea9c8b613f6e5a"
+              />
+          </div>
+        <button class="btn button btn-primary btn-lg">Create post</button>
+        </form>
+      </div>  
+    </main>
+</body>

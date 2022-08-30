@@ -4,20 +4,18 @@ const ImageSchema = new mongoose.Schema (
     {
         url: {
             type: String,
-            required: [true, "You must provide an image"],
+            required: [true, "You must provide an image"]
         },
-        description: String,
-        timestamp: Date,
-        likes: Number,
+        description: {type:String},
+        likes: {type: Number, default: 0},
         user: {
             type: mongoose.Types.ObjectId,
             ref: 'User'
         }
-        
     },
     { timestamps: true },
 );
 
-const Image = mongoose.models('Image', ImageSchema);
+const Image = mongoose.model('Image', ImageSchema);
 
 module.exports = Image;

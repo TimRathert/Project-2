@@ -20,7 +20,6 @@
     background-color: rgb(124, 128, 127);
   }
 
-
   h1 {
     text-align: center;
     color: black;
@@ -69,29 +68,23 @@
 
   .container {
     padding: 20px;
-    display: flex;
-    align-content: space-around;
-    padding-bottom: 10px;
-    padding-top: 10px;
   }
 
-  #left-box {
-    background-color: rgb(104, 0, 0);
-    color: white;
-    padding: 50px;
-  }
-
-  #right-box {
+  .containerTwo .form-controlTwo {
     background-color: #0077cd;
     height: 200px;
     color: white;
     font-size: 40px;
+    word-wrap: break-word;
   }
 
-  #show-container {
-    padding: 20px;
-    display: flex;
-    align-content: space-around;
-    padding-bottom: 10px;
-    padding-top: 10px;
+  .containerTwo .input-group-text-two {
+    background-color: rgb(104, 0, 0);
+    color: white;
+    padding: 50px;
   }
+  
+  .containerTwo {
+    padding: 20px;
+  }
+

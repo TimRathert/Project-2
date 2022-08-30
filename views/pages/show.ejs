@@ -11,13 +11,32 @@
                 <img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png" height=" 40px" width="40px">
             </a>
             <p style="font-size: 25px; color: black">|</p>
-            <a style="color: white" class="navbar-brand" href="/images/new">Add new Post</a>
+            <a style="color: white" class="navbar-brand" href="/new">Add new Post</a>
               <p style="font-size: 25px; color: black">|</p>
               <a style="color: white" class="navbar-brand" href="/popular">Popular Posts</a>
               <p style="font-size: 25px; color: black">|</p>
-              <a style="color: white" class="logIn" href="/login">Log In/Register</a>
-              <p style="font-size: 25px; color: black">|</p>
-              <a style="color: white" class="logIn" href="/about">About</a>
+              <a style="color: white" class="logIn" href="/images/<%= thisImage._id %>/edit">Edit Post</a>
+              <p style="font-size: 25px; color: black"></p>
             </div>
       </nav>
   </head>
+<body>
+
+    <section>
+        <div>
+            
+           <img src = "<%= thisImage.url %>">
+           <p><%= thisUser.username %>: <%= thisImage.description %></p>
+           <p>Likes: <%= thisImage.likes %></p>
+        </div>
+        <div>
+            <ul>
+                <% for( let i = 0; i < thisComments.length; i++ ) { %>
+                    <li><%= thisComments[i].content %></li>
+                <% } %>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg">Delete post</button>
+     </section>
+</body>
+</html>

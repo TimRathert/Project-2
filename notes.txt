@@ -1,8 +1,5 @@
 Name of Web: Instagramification 
 
-
-** ask about how to merge databases **
-
 Jobs: 
 - Front end >> css >> html >> Joey
 - Backend >> mongo >> routing >> JS >> Model >> Tim and Tullie
@@ -19,3 +16,4 @@ Tuesday >> CRUD routes for pictures >> CRUD for comments
 Wednesday >>  Have full CRUD ready and WORKING 
 Thursday >> Stretch goals
 
+***popular about and login routes***

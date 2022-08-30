@@ -6,8 +6,7 @@ const commentSchema = new mongoose.Schema (
             type: mongoose.Schema.Types.ObjectId,
             ref: 'comment'
         },
-        timestap: Date,
-        content: String,
+        content: {type: String},
         image: {
             type: mongoose.Types.ObjectId,
             ref: 'Image'
@@ -17,6 +16,6 @@ const commentSchema = new mongoose.Schema (
     { timestamps: true },
 );
 
-const Comment = mongoose.models('Comment', commentSchema);
+const Comment = mongoose.model('Comment', commentSchema);
 
 module.exports = Comment;
