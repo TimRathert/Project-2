@@ -16,3 +16,4 @@ Tuesday >> CRUD routes for pictures >> CRUD for comments
 Wednesday >>  Have full CRUD ready and WORKING 
 Thursday >> Stretch goals
 
+***popular about and login routes***
