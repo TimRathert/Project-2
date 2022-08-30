@@ -94,11 +94,8 @@
   .input-group {
     display: flex;
     justify-content: center;
-    
   }
-  .input-group{
-    display: block;
-  }
+ 
   #image-input-one {
     padding: 5%;
   }
@@ -206,4 +203,59 @@
 
   #like-btn:focus {
     color: red;
+  }
+
+  #create-btn-new {
+    background-color: rgb(123, 28, 28);
+    font-size: 12px;
+    width: 20%;
+    margin-left: 436px;
+  }
+
+  .form-control-login {
+    background-color: #0077cd;
+    height: 90%;
+    color: white;
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .input-group-login {
+    width: 80%;
+    text-align: center;
+  }
+
+  .form-control-login-two {
+    background-color: #0077cd;
+    height: 90%;
+    color: white;
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .input-group-login-two {
+    width: 80%;
+    text-align: center;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  .register {
+    margin-top: 30px;
+  }
+
+  #login-button {
+    background-color: rgb(123, 28, 28);
+    font-size: 12px;
+    width: 80px;
+    text-align: center;
+    padding: 0;
+    height: 20px;
+    margin-top: 20px;
+  }
+
+  #login-button:hover {
+    background-color: #0077cd;
   }
