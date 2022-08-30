@@ -38,7 +38,7 @@ router.post('/', async (req, res, next) => {
 // show specific
 
 // edit comment
-router.get('/comments/commentId', async (req, res, next)=>{
+router.get('/:commentId/edit', async (req, res, next)=>{
     try{
         const editComment = await db.Comment.findById(req.params.commentId);
         console.log(updatedComments)
@@ -46,20 +46,20 @@ router.get('/comments/commentId', async (req, res, next)=>{
     }
     catch(err){
         console.log(err)
-        req.err = err
+        req.error = err
         return next()
     }
 })
 // delete comment
-router.delete('/comments/commentId',async (req, res, next)=>{
+router.delete('/:commentId',async (req, res, next)=>{
     try{
         const deletedComment = await db.Comment.findById(req.params.commentId);
-        res.redirect('/home')
+        res.redirect(`/images/${deletedComment.image}`)
     }
     catch(err){
         console.log(err)
-    req.err = err
-    return next()
+        req.error = err
+        return next()
     }
     
 })

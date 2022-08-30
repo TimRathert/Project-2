@@ -32,14 +32,13 @@ router.post('/images', async (req, res, next) => {
 // SHOW ROUTE
 router.get('/images/:imageId', async (req, res, next) => {
     try{
-        const image = await db.Image.findById(req.params.imageId)     
-        const comments = await db.Comment.find({image: req.params.imageId})
-        const user = await db.User.findById(image.user)
+        const image = await db.Image.findById(req.params.imageId).populate('user').exec()     
+        const comments = await db.Comment.find({image: req.params.imageId}).populate('user').exec()
         
     let context = {
         thisImage: image,
         thisComments: comments,
-        thisUser: user
+
     };
     res.render('pages/show.ejs', context)
 
