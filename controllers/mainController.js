@@ -12,7 +12,7 @@ router.use(express.urlencoded({ extended: false }));
 
 //NEW ROUTE
 router.get('/new', (req, res) => {
-    res.render('new')
+    res.render('pages/create.ejs')
 })
 //CREATE ROUTE
 router.post('/', async (req, res, next) => {
@@ -38,7 +38,7 @@ router.get('/images/:imageId', async (req, res, next) => {
         thisImage: image,
         thisComments: comments
     };
-    res.render('pages/show', context)
+    res.render('pages/show.ejs', context)
 
     }    catch(err){
         console.log(err);
@@ -53,7 +53,7 @@ router.get('/home', async (req, res, next) => {
     try{
         const allImages = await db.Image.find({})
         let context = {images: allImages}
-        res.render('pages/home', context)
+        res.render('pages/home.ejs', context)
     }
     catch(err){
         console.log(err);
@@ -67,7 +67,7 @@ router.delete('/images/:imageId', async (req,res, next) => {
     try{
         const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
         console.log(deletedImage);
-        res.redirect('/home')
+        res.redirect('/home.ejs')
     }
     catch(err){
         console.log(err);
@@ -81,7 +81,7 @@ router.get('/images/:imageId/edit', async (req,res,next) => {
     try{
         const updatedImage = await db.Image.findById(req.params.imageId);
         console.log(updatedImage);
-        res.render('pages/edit', updatedImage)
+        res.render('pages/edit.ejs', updatedImage)
     }
     catch(err){
         console.log(err);
@@ -108,9 +108,9 @@ router.put('/images/:imageId', async (req, res, next) => {
 })
 
 //REDIRECT TO HOME
-router.get('/*', (req,res) => {
-    res.redirect('/home');
-})
+// router.get('/*', (req,res) => {
+//     res.redirect('/home');
+// })
 
 
 module.exports = router
