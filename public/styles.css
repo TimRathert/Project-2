@@ -13,6 +13,10 @@
   body {
     background-color: #C9CFC9;
   }
+
+  .show-body {
+    background-color: #C9CFC9;
+  }
   
   .container{
     display: block;
@@ -24,60 +28,6 @@
     text-align: center;
     color: black;
     margin-top: 70px;
-  }
-
-  .spacer {
-    font-size: 25px; 
-    color: black;
-  }
-
-  .logo{
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-  }
-
-  .logo:hover {
-    color: black;
-  }
-
-  .navbar-brand {
-    letter-spacing: 0;
-    cursor: pointer;
-    font-size: 16px;
-    color: black;
-  }
-
-  .navbar-brand:after,
-  .navbar-brand:before {
-    backface-visibility: hidden;
-    border: 1px solid rgba(#fff, 0);
-    bottom: 0px;
-    content: " ";
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    transition: all 280ms ease-in-out;
-    width: 0;
-   }
-
-  .navbar-brand:hover:after,
-  .navbar-brand:hover:before {
-    backface-visibility: hidden;
-    border-color: #fff;
-    transition: width 350ms ease-in-out;
-    width: 70%;
-  }
-
-  .navbar-brand:hover:before {
-    bottom: auto;
-    top: 0;
-    width: 70%;
-  }
-
-  .navbar-brand:hover {
-   color: black;
-   text-decoration: underline;
   }
 
   label.input-group-text {
@@ -139,20 +89,24 @@
   #show-page-delete {
     background-color: red;
     margin: 10px;
-    margin-top: 90px;
+    margin-top: 50px;
+    width: 10%;
+    height: 10%;
   }
 
   #show-page-delete:hover {
-    color: 0077cd;
+    color: black;
   }
 
   #show-comment-btn {
     background-color: #0077cd;
+    color: white;
     border-radius: 20%;
   }
 
   #show-comment-btn:hover {
-    background-color: rgb(123, 28, 28);
+    background-color: #0077cd;
+    color: black;
   }
 
   .content-show {
@@ -273,21 +227,12 @@
     background-color: #0077cd;
   }
 
-
-
-
-
-  body{
-  }
   
   .container-fluid .logIn{
       text-decoration: none;
       font-size: 20px;
       cursor: pointer;
       
-  }
-  
-  .logIn {
   }
   
   .navbar-brand{
@@ -310,7 +255,7 @@
       width: 40px;
   }
   
-  a{
+  a {
       color: white;
       transition: color .5s;
       text-decoration: none;
