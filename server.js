@@ -32,14 +32,14 @@ app.set('view engine', 'ejs')
 
 
 //MIDDLEWEAR
-app.use(express.static('public'));
 app.use(methodOverride('_method'));
-
+app.use('/static', express.static('public'))
 
 // CONTROLLER ROUTING
 app.use('/', mainController)
 app.use('/comments', commentController);
 app.use('/auth', auth_controller);
+
 
 
 // 

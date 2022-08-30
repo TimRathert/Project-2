@@ -2,11 +2,6 @@
     box-sizing: content-box;
   }
 
-  .container-fluid .logIn{
-    text-decoration: none;
-    font-size: 20px;
-  }
-
   .homeImages {
     margin-left: 140px;
   }
