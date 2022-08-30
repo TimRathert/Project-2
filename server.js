@@ -8,6 +8,7 @@ require('./config/db.controller')
 
 // CONTROLLER IMPORT
 const mainController = require(`./controllers/mainController.js`);
+const commentController = require(`./controllers/commentController.js`);
 
 // CONFIGS
 const app = express();
@@ -24,6 +25,7 @@ app.use(methodOverride('_method'));
 
 // CONTROLLER ROUTING
 app.use('/', mainController)
+app.use('/comments', commentController);
 
 
 // 
