@@ -37,17 +37,30 @@ router.post('/', async (req, res, next) => {
 })
 // show specific
 
-// edit comment
+// EDIT COMMENT
 router.get('/:commentId/edit', async (req, res, next)=>{
     try{
         const editComment = await db.Comment.findById(req.params.commentId);
-        console.log(updatedComments)
-        res.render('/pages/show.ejs', updatedComents)
+        //console.log(editComment)
+        res.render('./pages/comments/edit', {selectedComment: editComment})
     }
     catch(err){
         console.log(err)
         req.error = err
         return next()
+    }
+})
+// UPDATE COMMENT
+router.post('/:commentId', async (req, res, next) => {
+    try{
+        const updatedComment = await db.Comment.findByIdAndUpdate(req.params.commentId, req.body, {new: true})
+        //console.log(updatedComment.image)
+        res.redirect(`/images/${updatedComment.image}`)
+    }
+    catch(err){
+        console.log(err)
+        req.error = err
+        return next();
     }
 })
 // delete comment

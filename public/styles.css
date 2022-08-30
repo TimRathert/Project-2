@@ -18,7 +18,11 @@
   body {
     background-color: rgb(124, 128, 127);
   }
-
+  .container{
+    display: block;
+    right: 100px;
+    width: 100%;
+  }
 
   h1 {
     text-align: center;
@@ -66,7 +70,7 @@
     color: white;
     font-size: 40px;
     word-wrap: break-word;
-    width: 20%;
+    width: 100%;
   }
 
   #url.form-control {
@@ -81,7 +85,9 @@
   .input-group-prepend {
     width: 100%;
   }
-
+  .input-group{
+    display: block;
+  }
   #image-input-one {
     padding: 5%;
   }
@@ -94,7 +100,7 @@
 
   .btn.button.btn-primary.btn-lg {
     background-color: rgb(104, 0, 0);
-  }
+   }
   
   #show-page {
     background-color: rgb(124, 128, 127);
