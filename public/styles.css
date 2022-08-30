@@ -8,7 +8,11 @@
   }
 
   .homeImages {
-    padding-left: 
+    margin-left: 55px;
+  }
+
+  .image-home {
+    padding: 5px;
   }
 
   body {
@@ -92,9 +96,22 @@
     background-color: rgb(104, 0, 0);
   }
   
+  #show-page {
+    background-color: rgb(124, 128, 127);
+  }
 
+ .show-page-image{
+    padding: 10px;
+  }
 
+  #show-page-delete {
+    background-color: red;
+  }
 
+  #show-comment-btn {
+    background-color: #0077cd;
+    border-radius: 20%;
+  }
   
 
  
