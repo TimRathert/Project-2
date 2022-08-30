@@ -82,7 +82,6 @@
   }
 
   .input-group {
-    width: 100%;
     display: flex;
     justify-content: center;
     
@@ -90,15 +89,19 @@
 
   #image-input-one {
     padding: 5%;
+   
   }
 
   #image-input-two {
     padding: 5%;
+   
   }
 
-  .btn.button.btn-primary.btn-lg {
+  #create-btn {
     background-color: rgb(104, 0, 0);
-    
+    font-size: 12px;
+    width: 20%;
+    margin-left: 436px;
   }
 
  .show-page-image{
@@ -107,12 +110,26 @@
 
   #show-page-delete {
     background-color: red;
+    margin: 10px;
+    margin-top: 90px;
   }
 
   #show-comment-btn {
     background-color: #0077cd;
     border-radius: 20%;
   }
-  
 
- 
+  .content-show {
+    padding: 10px;
+  }
+
+  .content-text {
+    padding: 10px;
+  }
+
+  #edit-button {
+    background-color: rgb(104, 0, 0);
+    font-size: 12px;
+    width: 20%;
+    margin-left: 465px;
+  }

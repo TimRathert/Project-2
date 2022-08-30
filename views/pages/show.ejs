@@ -23,7 +23,7 @@
 <body>
 
     <section>
-        <div>
+        <div class="content-show">
             
            <img class= "show-page-image" src = "<%= thisImage.url %>">
            <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
@@ -39,7 +39,7 @@
             </ul>
         </div>
 <!-- NEW COMMENT FORM -->
-        <form action="/comments" method="POST" id="content">
+        <form action="/comments" method="POST" id="content" class="content-text">
             <div>
                 <textarea 
                     id="content" 
