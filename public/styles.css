@@ -18,7 +18,11 @@
   body {
     background-color: rgb(124, 128, 127);
   }
-
+  .container{
+    display: block;
+    right: 100px;
+    width: 100%;
+  }
 
   h1 {
     text-align: center;
@@ -92,7 +96,9 @@
     justify-content: center;
     
   }
-
+  .input-group{
+    display: block;
+  }
   #image-input-one {
     padding: 5%;
   }
