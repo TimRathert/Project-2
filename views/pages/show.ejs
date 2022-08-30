@@ -11,7 +11,7 @@
                 <img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png" height=" 40px" width="40px">
             </a>
             <p style="font-size: 25px; color: black">|</p>
-            <a style="color: white" class="navbar-brand" href="/new">Add new Post</a>
+            <a style="color: white" class="navbar-brand" href="/images/new">Add new Post</a>
               <p style="font-size: 25px; color: black">|</p>
               <a style="color: white" class="navbar-brand" href="/popular">Popular Posts</a>
               <p style="font-size: 25px; color: black">|</p>
@@ -32,11 +32,35 @@
         <div>
             <ul>
                 <% for( let i = 0; i < thisComments.length; i++ ) { %>
-                    <li><%= thisComments[i].content %></li>
+                    <!-- <style>li {list-style-image: url(<%= thisUser.profImage %>)}</style> -->
+                    <li><%= thisComments[i].user %><%= thisComments[i].content %></li>
                 <% } %>
             </ul>
         </div>
-        <button type="button" class="btn btn-primary btn-lg">Delete post</button>
+<!-- NEW COMMENT FORM -->
+        <form action="/comments" method="POST" id="content">
+            <div>
+                <textarea 
+                    id="content" 
+                    name="content" 
+                    row="3"
+                    placeholder="New Comment">
+
+                </textarea>
+                <input type="submit" value="Add Comment"/>
+            
+            
+             
+                <input type="hidden" name="username" id="username" value="630d14bde0d3cb80372ea249">
+                <input type="hidden" name="image" id="image" value="<%= thisImage.id%>">
+            </div>
+        </form>
+
+
+<!-- DELETE FORM -->        
+        <form method="POST" action="/images/<%=thisImage._id%>?_method=DELETE">
+        <button class="btn btn-primary btn-lg">Delete post</button>
+    </form>
      </section>
 </body>
 </html>

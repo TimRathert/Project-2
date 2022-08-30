@@ -67,10 +67,11 @@ router.get('/home', async (req, res, next) => {
 
 // DESTROY
 router.delete('/images/:imageId', async (req,res, next) => {
+    
     try{
         const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
         console.log(deletedImage);
-        res.redirect('/home.ejs')
+        res.redirect('/home')
     }
     catch(err){
         console.log(err);
