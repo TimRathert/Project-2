@@ -44,7 +44,7 @@ router.get('/images/:imageId', async (req, res, next) => {
     };
     res.render('pages/show.ejs', context)
 
-    }    catch(err){
+    } catch(err){
         console.log(err);
         require.error = err;
         return next();
