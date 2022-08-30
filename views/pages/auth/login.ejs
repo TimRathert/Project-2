@@ -6,20 +6,17 @@
   </head>  
   <body>
     <section>
+      <h1>Login</h1>
       <div>
-        <h1>Login</h1>
+      <main class="container">
 
-        <main class="container">
         <div class="input-group input-group-lg">
         <form action="/auth/login" method="POST" class="form">
+
           <div class="input-group-prepend" id="image-input-one">
             <label for="url" class="input-group-login">Username</label>
-
-        <form action="/auth/login" method="POST">
-          <div>
-            <label>Username</label>
+            <form action="/auth/login" method="POST" class="form">
             <div>
-
               <input
                 name="username"
                 type="text"
@@ -40,15 +37,17 @@
                 class="form-control-login-two"
               />
           </div>
-          <div>
+        
+          
             <div>
               <button id="login-button" class="btn button btn-primary btn-lg">Submit</button>
             </div>
-          </div>
+          
           <div class="register">Need an account? <a href="/auth/register"> Click here!</a> </div>
+          </div>
         </form>
-    </section>
-  </div>
-  </main>
+      </main>
+    </div>
   </body>
+</section>
 </html>
