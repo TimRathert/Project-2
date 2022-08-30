@@ -16,12 +16,14 @@ router.get('/images/new', (req, res) => {
 })
 //CREATE ROUTE
 router.post('/images', async (req, res, next) => {
-    try{
-        if (req.session.currentUser){        
-        const newImage = req.body;
+    try{    
+        const newImage = {
+            ...req.body,
+            user: req.session.currentUser.id,
+        };
         const createdImage = await db.Image.create(newImage)
         res.redirect(`/images/${createdImage._id}`)
-        }
+        
     }
     catch(err){
         console.log(err)
