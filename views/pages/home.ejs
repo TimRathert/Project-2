@@ -9,11 +9,11 @@
     <%- include ('../partials/head') %>
 </head>
 <body>
-    <h1>Your Homepage</h1>
+    <h1>Homepage</h1>
     <div class="homeImages">
         <% for( let i = 0; i<images.length; i++){ %>
             <% const firstImage = images[i] %>
-            <a href="/images/<%=firstImage._id%>"><img src="<%= firstImage.url %>"</a> 
+            <a href="/images/<%=firstImage._id%>"><img class="image-home" src="<%= firstImage.url %>"</a> 
         <% } %> 
     </div>
 </body>
