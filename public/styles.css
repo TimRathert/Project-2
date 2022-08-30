@@ -16,8 +16,9 @@
   }
 
   body {
-    background-color: rgb(124, 128, 127);
+    background-color: #C9CFC9;
   }
+  
   .container{
     display: block;
     right: 100px;
@@ -27,40 +28,61 @@
   h1 {
     text-align: center;
     color: black;
+    margin-top: 70px;
   }
 
-  .logIn:hover {
-    background-color: rgb(123, 28, 28);
-    border-radius: 14%;
-    border: none;
-    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
-    top:50%;
+  .spacer {
+    font-size: 25px; 
+    color: black;
   }
 
-  .logIn {
-    cursor: pointer;
+  .logo{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
   }
 
-  .navbar-brand:hover {
-    background-color: rgb(123, 28, 28);
-    border-radius: 14%;
-    border: none;
-    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
-    top:50%;
+  .logo:hover {
+    color: black;
   }
 
   .navbar-brand {
+    letter-spacing: 0;
     cursor: pointer;
+    font-size: 16px;
+    color: black;
   }
 
-  .logIn:active {
-    box-shadow: 0 5px rgb(124, 128, 127);
-    transform: translateY(4px);
+  .navbar-brand:after,
+  .navbar-brand:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+   }
+
+  .navbar-brand:hover:after,
+  .navbar-brand:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
   }
 
-  .navbar-brand:active {
-      box-shadow: 0 5px rgb(124, 128, 127);
-      transform: translateY(4px);
+  .navbar-brand:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+  }
+
+  .navbar-brand:hover {
+   color: black;
+   text-decoration: underline;
   }
 
   label.input-group-text {
@@ -158,12 +180,12 @@
   }
 
   .about-info {
-    font-size: 40px;
-    color: white;
+    font-size: 25px;
+    color: black;
     text-align: center;
     padding: 10px;
     font-weight: 200;
-    line-height: 100px;
+    line-height: 40px;
     word-spacing: 5px;
   }
 
@@ -185,16 +207,11 @@
 
   #like-btn {
     color: white;
-    background-color: rgb(124, 128, 127);
+    background-color: #C9CFC9;
     border: none;
     font-size: 50px;
     margin-top: 350px; 
     margin-right: 40px;
-    border-color: rgb(124, 128, 127);
-  }
-
-  #like-btn:hover {
-    color: red;
   }
 
   #like-btn:active {
@@ -223,6 +240,7 @@
   .input-group-login {
     width: 80%;
     text-align: center;
+    margin-left: 30px;
   }
 
   .form-control-login-two {
@@ -230,11 +248,11 @@
     height: 90%;
     color: white;
     font-size: 20px;
-    width: 70%;
+    width: 78%;
   }
 
   .input-group-login-two {
-    width: 80%;
+    width: 90px;
     text-align: center;
   }
 
