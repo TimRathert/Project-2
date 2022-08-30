@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../../partials/head') %>
+        <h1 class="title">Register</h1>
+        <form action="/auth/register" method="POST" class="box">
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control">
+              <input
+                name="username"
+                class="input"
+                type="text"
+                placeholder="username"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Profile Picture</label>
+            <div class="control">
+              <input
+                name="profImage"
+                class="input"
+                type="profImage"
+                placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Hot_dog_with_mustard.png/220px-Hot_dog_with_mustard.png"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input
+                name="password"
+                class="input"
+                type="password"
+                placeholder="******"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-link is-fullwidth">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <main class="container is-max-widescreen"></main>
+  </body>
+</html>
