@@ -15,7 +15,7 @@ router.get('/new', (req, res) => {
     res.render('pages/create.ejs')
 })
 //CREATE ROUTE
-router.post('/', async (req, res, next) => {
+router.post('/images', async (req, res, next) => {
     const newImage = req.body;
     try{
         const createdImage = await db.Image.create(newImage)

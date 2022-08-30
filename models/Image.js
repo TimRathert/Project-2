@@ -7,7 +7,7 @@ const ImageSchema = new mongoose.Schema (
             required: [true, "You must provide an image"]
         },
         description: {type:String},
-        likes: {type: Number},
+        likes: {type: Number, default: 0},
         user: {
             type: mongoose.Types.ObjectId,
             ref: 'User'
