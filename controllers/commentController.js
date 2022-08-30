@@ -25,9 +25,15 @@ router.get('/', async (req, res, next) => {
 // new comment
 router.post('/', async (req, res, next) => {
     try{
-        const newComment = await db.Comment.create(req.body)
+        if(req.session){
+        const commentContent = {
+            ...req.body,
+            user: req.session.currentUser.id,
+        }
+        const newComment = await db.Comment.create(commentContent)
         console.log(newComment)
         res.redirect(`/images/${newComment.image}`)
+        }
     }
     catch (err) {
         console.log(err);
