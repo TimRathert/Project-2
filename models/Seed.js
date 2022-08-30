@@ -11,17 +11,17 @@ const images = [
         
     },
     {
-        url: '',
+        url: 'https://i.kym-cdn.com/entries/icons/original/000/020/147/drake.jpg',
         description: 'this is beans',
         likes: 20,
-        user:'',
+        user:'630d15b4cb97ad903d4b6eff',
 
     },
     {
-        url: '',
+        url: 'https://imgflip.com/i/6rn1nf',
         description: 'man oh man',
         likes: 500,
-        user: ''
+        user: '630d1de110ea9c8b613f6e5a'
     }
     
 ]
@@ -61,6 +61,6 @@ const users = [
     }
 ]
 
-// Image.insertMany(images)
-// Comment.insertMany(comments)
-User.insertMany(users)
+Image.insertMany(images)
+Comment.insertMany(comments)
+// User.insertMany(users)

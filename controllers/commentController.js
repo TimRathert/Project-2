@@ -38,7 +38,30 @@ router.post('/', async (req, res, next) => {
 // show specific
 
 // edit comment
-
+router.get('/comments/commentId', async (req, res, next)=>{
+    try{
+        const editComment = await db.Comment.findById(req.params.commentId);
+        console.log(updatedComments)
+        res.render('/pages/show.ejs', updatedComents)
+    }
+    catch(err){
+        console.log(err)
+        req.err = err
+        return next()
+    }
+})
 // delete comment
+router.delete('/comments/commentId',async (req, res, next)=>{
+    try{
+        const deletedComment = await db.Comment.findById(req.params.commentId);
+        res.redirect('/home')
+    }
+    catch(err){
+        console.log(err)
+    req.err = err
+    return next()
+    }
+    
+})
 
 module.exports = router

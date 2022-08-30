@@ -67,7 +67,7 @@ router.get('/home', async (req, res, next) => {
 
 // DESTROY
 router.delete('/images/:imageId', async (req,res, next) => {
-    console.log('should i delete')
+    
     try{
         const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
         console.log(deletedImage);
