@@ -12,3 +12,15 @@ router.use(express.urlencoded({ extended: false }));
 
 
 // populate route
+router.get('/', async (req, res, next)=>{
+    try{
+        const popularPost = await db.Popular.find().populate('likes').exec
+        const allImages = await db.Image.find({})
+        res.render('/pages/popular.ejs', {popular: popularPost, images: allImages})
+    }
+    catch(error){
+        console.log(err);
+        req.error = err;
+        return next();
+    }
+})
