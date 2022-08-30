@@ -15,3 +15,14 @@ Monday >> envision how our layout would like on day 1 >> wireframes >> map for o
 Tuesday >> CRUD routes for pictures >> CRUD for comments 
 Wednesday >>  Have full CRUD ready and WORKING >> CSS in place
 Thursday >> Stretch goals
+
+
+
+
+
+
+
+
+
+
+  
