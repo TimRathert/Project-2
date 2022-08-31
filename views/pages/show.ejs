@@ -15,19 +15,21 @@
             <div class="content-show">
                 
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
-                <input id="like-btn" type="button" value="♥️" class="btn btn-primary btn-lg"/>
                 <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
                 <p>Likes: <%= thisImage.likes %></p>
-        </div>
-        <div>
-           
-            <ul>
-                <% for( let i = 0; i < thisComments.length; i++ ) { %>
-                     
-                    <li><img src = <%= thisComments[i].user.profImage%> width="20px" height="20px"> <%= thisComments[i].user.username%>: <%= thisComments[i].content %></li>
-                    
-                <% } %>
-            </ul>
+                <button class="edit-show-btn">
+                    <a class = "edit-show-btn" href="/images/<%= thisImage.id %>/edit">Edit post</a>
+                </button>
+            </div>
+            <div>
+                
+                <ul>
+                    <% for( let i = 0; i < thisComments.length; i++ ) { %>
+                        
+                        <li><img src = <%= thisComments[i].user.profImage%> width="20px" height="20px"> <%= thisComments[i].user.username%>: <%= thisComments[i].content %></li>
+                        
+                        <% } %>
+                    </ul>
         </div>
 <!-- NEW COMMENT FORM -->
         <form action="/comments" method="POST" id="content" class="content-text">

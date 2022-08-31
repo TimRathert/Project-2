@@ -5,9 +5,10 @@
   .homeImages {
     margin-left: 140px;
   }
-
+  
   .image-home {
     padding: 5px;
+    border-radius: 10%;
   }
 
   body {
@@ -80,18 +81,20 @@
 
   #create-btn:hover {
     background-color: #0077cd;
+    transition: color .5s;
   }
 
  .show-page-image{
     padding: 10px;
+    border-radius: 10%;
+    
   }
 
   #show-page-delete {
     background-color: red;
-    margin: 10px;
-    margin-top: 50px;
     width: 10%;
-    height: 10%;
+    height: 5%;
+    transition: color .5s;
   }
 
   #show-page-delete:hover {
@@ -102,6 +105,7 @@
     background-color: #0077cd;
     color: white;
     border-radius: 20%;
+    transition: color .5s;
   }
 
   #show-comment-btn:hover {
@@ -122,6 +126,7 @@
     font-size: 12px;
     width: 20%;
     margin-left: 465px;
+    transition: color .5s;
   }
 
   #edit-button:hover {
@@ -161,6 +166,7 @@
     font-size: 50px;
     margin-top: 350px; 
     margin-right: 40px;
+    transition: color .5s;
   }
 
   #like-btn:active {
@@ -176,6 +182,7 @@
     font-size: 12px;
     width: 20%;
     margin-left: 436px;
+    transition: color .5s;
   }
 
   .form-control-login {
@@ -221,10 +228,12 @@
     padding: 0;
     height: 20px;
     margin-top: 20px;
+    transition: color .5s;
   }
 
   #login-button:hover {
     background-color: #0077cd;
+
   }
 
   
@@ -265,9 +274,18 @@
       color: rgba(255,255,255,0.5)
   }
     
-  
-  
   .logIn:active {
     box-shadow: 0 5px rgb(124, 128, 127);
     transform: translateY(4px);
+  }
+
+  .edit-show-btn {
+    background-color: #0077cd;
+    color: white;
+    border-radius: 20%;
+  }
+
+  .edit-show-btn:hover {
+    background-color: #0077cd;
+    color: black;
   }
