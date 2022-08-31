@@ -5,12 +5,17 @@
   .homeImages {
     margin-left: 140px;
   }
-
+  
   .image-home {
     padding: 5px;
+    border-radius: 10%;
   }
 
   body {
+    background-color: #C9CFC9;
+  }
+
+  .show-body {
     background-color: #C9CFC9;
   }
   
@@ -24,60 +29,6 @@
     text-align: center;
     color: black;
     margin-top: 70px;
-  }
-
-  .spacer {
-    font-size: 25px; 
-    color: black;
-  }
-
-  .logo{
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-  }
-
-  .logo:hover {
-    color: black;
-  }
-
-  .navbar-brand {
-    letter-spacing: 0;
-    cursor: pointer;
-    font-size: 16px;
-    color: black;
-  }
-
-  .navbar-brand:after,
-  .navbar-brand:before {
-    backface-visibility: hidden;
-    border: 1px solid rgba(#fff, 0);
-    bottom: 0px;
-    content: " ";
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    transition: all 280ms ease-in-out;
-    width: 0;
-   }
-
-  .navbar-brand:hover:after,
-  .navbar-brand:hover:before {
-    backface-visibility: hidden;
-    border-color: #fff;
-    transition: width 350ms ease-in-out;
-    width: 70%;
-  }
-
-  .navbar-brand:hover:before {
-    bottom: auto;
-    top: 0;
-    width: 70%;
-  }
-
-  .navbar-brand:hover {
-   color: black;
-   text-decoration: underline;
   }
 
   label.input-group-text {
@@ -130,29 +81,36 @@
 
   #create-btn:hover {
     background-color: #0077cd;
+    transition: color .5s;
   }
 
  .show-page-image{
     padding: 10px;
+    border-radius: 10%;
+    
   }
 
   #show-page-delete {
     background-color: red;
-    margin: 10px;
-    margin-top: 90px;
+    width: 10%;
+    height: 5%;
+    transition: color .5s;
   }
 
   #show-page-delete:hover {
-    color: 0077cd;
+    color: black;
   }
 
   #show-comment-btn {
     background-color: #0077cd;
+    color: white;
     border-radius: 20%;
+    transition: color .5s;
   }
 
   #show-comment-btn:hover {
-    background-color: rgb(123, 28, 28);
+    background-color: #0077cd;
+    color: black;
   }
 
   .content-show {
@@ -168,6 +126,7 @@
     font-size: 12px;
     width: 20%;
     margin-left: 465px;
+    transition: color .5s;
   }
 
   #edit-button:hover {
@@ -207,6 +166,7 @@
     font-size: 50px;
     margin-top: 350px; 
     margin-right: 40px;
+    transition: color .5s;
   }
 
   #like-btn:active {
@@ -222,6 +182,7 @@
     font-size: 12px;
     width: 20%;
     margin-left: 436px;
+    transition: color .5s;
   }
 
   .form-control-login {
@@ -267,27 +228,20 @@
     padding: 0;
     height: 20px;
     margin-top: 20px;
+    transition: color .5s;
   }
 
   #login-button:hover {
     background-color: #0077cd;
+
   }
 
-
-
-
-
-  body{
-  }
   
   .container-fluid .logIn{
       text-decoration: none;
       font-size: 20px;
       cursor: pointer;
       
-  }
-  
-  .logIn {
   }
   
   .navbar-brand{
@@ -310,7 +264,7 @@
       width: 40px;
   }
   
-  a{
+  a {
       color: white;
       transition: color .5s;
       text-decoration: none;
@@ -320,9 +274,18 @@
       color: rgba(255,255,255,0.5)
   }
     
-  
-  
   .logIn:active {
     box-shadow: 0 5px rgb(124, 128, 127);
     transform: translateY(4px);
+  }
+
+  .edit-show-btn {
+    background-color: #0077cd;
+    color: white;
+    border-radius: 20%;
+  }
+
+  .edit-show-btn:hover {
+    background-color: #0077cd;
+    color: black;
   }
