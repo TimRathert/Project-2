@@ -142,10 +142,18 @@ router.get('/about', (req, res) => {
 })
 
 // Popular
-// router.get('/popular', (req, res) => {
-//     const mostPopular = await db.Popular.findById(req.params.popular)
-//     res.render('pages/popular.ejs')
-// })
+router.get('/popular', async (req, res) => {
+    try{
+        const mostPopular = await db.Image.find({}).sort({likes: -1})      
+        console.log(mostPopular)
+        
+        res.render('pages/popular.ejs',{likes: mostPopular})
+    }
+    catch(err){
+        console.log(err)
+    }
+   
+})
 
 //REDIRECT TO HOME
 // router.get('/*', (req,res) => {
