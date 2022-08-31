@@ -155,9 +155,9 @@ router.get('/about', (req, res) => {
 // Popular
 router.get('/popular', async (req, res) => {
     try{
-        const mostPopular = await db.Image.find({}).sort({likes: -1})      
+        const mostPopular = await db.Image.find({}).sort({likes: -1})  
         console.log(mostPopular)
-        
+   
         res.render('pages/popular.ejs',{likes: mostPopular})
     }
     catch(err){
