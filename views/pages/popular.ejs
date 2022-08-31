@@ -13,7 +13,8 @@
 <body>
     <ul>
         <% for( let i = 0; i < likes.length; i++ ) { %>
-            <li><%= likes[i].content%></li>
+             <img src="<%= likes[i].url%>" alt="image">
+             <h2>♥️: <%= likes[i].likes %></h2>
         <% } %>
     </ul>
 </body>

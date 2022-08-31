@@ -2,9 +2,7 @@
 const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
-
 const db = require('../models')
-
 router.use(express.json());
 router.use(express.urlencoded({ extended: false }));
 
@@ -42,12 +40,22 @@ router.post('/images', async (req, res, next) => {
 })
 
 // likes
-router.put('/images/:imageId', async (req, res, next)=>{
+router.put('/images/:imageId', authRequired, async (req, res, next)=>{
     try{
         const likeIt = await db.Image.findById(req.params.imageId);
-        likeIt.likes = likeIt.likes + 1
+        if (!likeIt.likedBy.includes(req.session.currentUser.id)){
+            likeIt.likes = likeIt.likes + 1;
+            likeIt.likedBy.push(req.session.currentUser.id)
+            //console.log(likeIt)
+        }
+        else {
+            likeIt.likes -= 1;
+            likeIt.likedBy.splice(likeIt.likedBy.indexOf(req.session.currentUser.id), 1);
+            //console.log(likeIt)
+        }
         const updatedLike = await db.Image.findByIdAndUpdate(req.params.imageId, likeIt,{new: true})
-        console.log(updatedLike)
+        //console.log(updatedLike)
+        
         res.redirect(`/images/${req.params.imageId}`)
     }
     catch(err){
@@ -58,14 +66,17 @@ router.put('/images/:imageId', async (req, res, next)=>{
 // SHOW ROUTE
 router.get('/images/:imageId', async (req, res, next) => {
     try{
-        const image = await db.Image.findById(req.params.imageId).populate('user').exec()     
+        const image = await db.Image.findById(req.params.imageId)
+            .populate('user')
+            .populate('likedBy')
+            .exec()     
         const comments = await db.Comment.find({image: req.params.imageId}).populate('user').exec()
         
     let context = {
         thisImage: image,
         thisComments: comments,
-
     };
+
     res.render('pages/show.ejs', context)
 
     } catch(err){
@@ -163,10 +174,18 @@ router.get('/about', (req, res) => {
 })
 
 // Popular
-// router.get('/popular', (req, res) => {
-//     const mostPopular = await db.Popular.findById(req.params.popular)
-//     res.render('pages/popular.ejs')
-// })
+router.get('/popular', async (req, res) => {
+    try{
+        const mostPopular = await db.Image.find({}).sort({likes: -1})  
+        console.log(mostPopular)
+   
+        res.render('pages/popular.ejs',{likes: mostPopular})
+    }
+    catch(err){
+        console.log(err)
+    }
+   
+})
 
 //REDIRECT TO HOME
 // router.get('/*', (req,res) => {

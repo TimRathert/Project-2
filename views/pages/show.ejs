@@ -2,67 +2,89 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>InstantGramification</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <%- include ('../partials/head') %>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/showStyle.css">
     <nav class='navbar' style="background-color: #0077cd"></nav>
    
     </head>
     <body>
         <main class="show-body">
-        
-        <section>
-            <div class="content-show">
-                
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
+                <div class="top-bar">
+                    <div class="display-3 username"><%= thisImage.user.username %> </div>
 
-                <form id="like-btn" action="/images/<%= thisImage._id%>?_method=PUT" method="POST"> 
-                    <button type="submit">♥️</button>
+                <% if (user.id === thisImage.user.id) { %>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          options
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <button class="dropdown-item" href="/images/<%=thisImage.id%>/edit">Edit Post</button>
+                            <form method="POST" action="/images/<%=thisImage._id%>?_method=DELETE">
+                                <button id="show-page-delete" class="btn btn-primary btn-lg">Delete post</button>
+                            </form>
+                        </div>
+                      </div>  
+                      <% } %>
 
+                    <div class="likesText">Likes: <%= thisImage.likes %></div>    
                 
-                </form> 
-                
-                
 
-                <input id="like-btn" type="button" value="♥️" class="btn btn-primary btn-lg"/>
-
-                <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
-                <p>Likes: <%= thisImage.likes %></p>
-                <button class="edit-show-btn">
-                    <a class = "edit-show-btn" href="/images/<%= thisImage.id %>/edit">Edit post</a>
-                </button>
+                <% if (user) {%>
+                    <form id="like-btn-form" action="/images/<%= thisImage._id%>?_method=PUT" method="POST">
+                        <input 
+                            id="like-btn" 
+                            type="submit" 
+                            value="♥️" 
+                            class="btn btn-primary btn-lg
+                            <% if (thisImage.likedBy.some(obj => obj.id === user.id)) { %>
+                                like-btn-liked
+                            <% } else { %>
+                                like-btn-unliked
+                            <% }%>
+                            "/>        
+                    </form>
+                <% } %>
+                 
+                </div>
+                <div class="imageDescription">
+                    <%= thisImage.description %>
+                </div>
             </div>
             <div>
-                
+<!-- NEW COMMENT FORM -->
+<form action="/comments" method="POST" id="content" class="content-text">
+    <div>
+        <textarea 
+            id="content" 
+            name="content" 
+            row="3"
+            placeholder="New Comment">
+            
+            
+        </textarea>
+        <input id="show-comment-btn" type="submit" value="Add Comment"/>                
                 <ul>
-                    <% for( let i = 0; i < thisComments.length; i++ ) { %>
+                    <% for( let i = thisComments.length-1; i >= 0 ; i-- ) { %>
                         
                         <li><img src = <%= thisComments[i].user.profImage%> width="20px" height="20px"> <%= thisComments[i].user.username%>: <%= thisComments[i].content %></li>
                         
                         <% } %>
                     </ul>
         </div>
-<!-- NEW COMMENT FORM -->
-        <form action="/comments" method="POST" id="content" class="content-text">
-            <div>
-                <textarea 
-                    id="content" 
-                    name="content" 
-                    row="3"
-                    placeholder="New Comment">
-                    
-                </textarea>
-                <input id="show-comment-btn" type="submit" value="Add Comment"/>
+
                 
                 <input type="hidden" name="image" id="image" value="<%= thisImage.id%>">
             </div>
         </form>
         
-        <!-- DELETE FORM -->        
-        <form method="POST" action="/images/<%=thisImage._id%>?_method=DELETE">
-            <button id="show-page-delete" class="btn btn-primary btn-lg">Delete post</button>
-        </form>
-    </section>
+
+
     </main>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
