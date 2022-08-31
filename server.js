@@ -12,6 +12,7 @@ const MongoStore = require('connect-mongo')
 const mainController = require(`./controllers/mainController.js`);
 const commentController = require(`./controllers/commentController.js`);
 const auth_controller = require(`./controllers/auth_controller.js`);
+const user_controller = require(`./controllers/user_controller.js`);
 
 // CONFIGS
 const app = express();
@@ -50,6 +51,7 @@ const authRequired = function (req, res, next){
 app.use('/', mainController)
 app.use('/comments', authRequired, commentController);
 app.use('/auth', auth_controller);
+app.use('/user', user_controller);
 
 
 

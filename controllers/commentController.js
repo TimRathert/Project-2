@@ -31,7 +31,7 @@ router.post('/', async (req, res, next) => {
             user: req.session.currentUser.id,
         }
         const newComment = await db.Comment.create(commentContent)
-        console.log(newComment)
+        //console.log(newComment)
         res.redirect(`/images/${newComment.image}`)
         }
     }

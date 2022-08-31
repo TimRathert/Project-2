@@ -11,7 +11,7 @@
 <body>
     <main class="container">
         <div class="input-group input-group-lg">
-          <form action="/images" method="POST" class="form">
+          <form action="/images/<%=image.id%>?_method=PUT" method="POST" class="form">
             <div class="input-group-prepend" id="image-input-one"> 
               <label for="url" class="input-group-text">Edit post image</label>
                 <input 
