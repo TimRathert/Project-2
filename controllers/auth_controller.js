@@ -44,7 +44,7 @@ router.post('/login', async (req,res,next) => {
 
         req.session.currentUser = {
             id: checkUser._id,
-            username: checkUser.username.at,
+            username: checkUser.username,
         }
         return res.redirect('/home')
     }
