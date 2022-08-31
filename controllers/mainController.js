@@ -1,4 +1,5 @@
 // DEPENDENCIES
+const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 
@@ -69,8 +70,28 @@ router.get('/images/:imageId', async (req, res, next) => {
 
     } catch(err){
         console.log(err);
-        require.error = err;
+        req.error = err;
         return next();
+    }
+})
+
+// PROFILE ROUTE
+router.get('/user/:id', authRequired, async (req, res, next) => {
+    try{
+        const profilePage = await db.User.findById(req.params.id)
+        const userImage = await db.Image.find({user: req.params.id})
+        // console.log(user)
+        const context = {
+            thisPage: profilePage,
+            thisUser: userImage,
+            
+        };
+        res.render('pages/profile.ejs', context)
+    }
+    catch(err){
+        console.log(err);
+        req.error= err;
+        return next()
     }
 })
 

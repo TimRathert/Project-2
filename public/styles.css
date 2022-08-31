@@ -289,3 +289,31 @@
     background-color: #0077cd;
     color: black;
   }
+
+  .username {
+    font-size: 60px;
+  }
+
+  .profile-photo {
+    border-radius: 10%;
+    
+  }
+
+  .user-photos {
+    border-radius: 10%;
+    display: inline-block;
+    margin-right: 2%; 
+    margin-top: 5%;
+  }
+
+  .profile {
+    text-align: center;
+  }
+
+  .photos-main {
+    text-align: center;
+  }
+
+  .line {
+    border: 3px solid;
+  }
