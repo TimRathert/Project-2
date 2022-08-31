@@ -30,6 +30,7 @@
 
                     <div class="likesText">Likes: <%= thisImage.likes %></div>    
                 
+
                 <% if (user) {%>
                     <form id="like-btn-form" action="/images/<%= thisImage._id%>?_method=PUT" method="POST">
                         <input 
