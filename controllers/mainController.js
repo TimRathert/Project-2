@@ -39,7 +39,7 @@ router.post('/images', async (req, res, next) => {
 })
 
 // likes
-router.put('/images/:imageId', authRequired, async (req, res, next)=>{
+router.put('/likes/:imageId', authRequired, async (req, res, next)=>{
     try{
         const likeIt = await db.Image.findById(req.params.imageId);
         if (!likeIt.likedBy.includes(req.session.currentUser.id)){
@@ -117,11 +117,11 @@ router.delete('/images/:imageId', async (req,res, next) => {
 })
 
 // EDIT ROUTE
-router.get('/images/:imageId/edit', async (req,res,next) => {
+router.get('/images/:imageId/edit', authRequired, async (req,res,next) => {
     try{
         const updatedImage = await db.Image.findById(req.params.imageId);
-        console.log(updatedImage);
-        res.render('pages/edit.ejs', updatedImage)
+        //console.log(updatedImage);
+        res.render('pages/edit.ejs', {image: updatedImage})
     }
     catch(err){
         console.log(err);
@@ -131,19 +131,25 @@ router.get('/images/:imageId/edit', async (req,res,next) => {
 })
 
 // UPDATE ROUTE
-router.put('/images/:imageId', async (req, res, next) => {
+router.put('/images/:imageId', async (req, res) => {
     try{
-        const newImageData = req.body;
+        const placeholder = await db.Image.findById(req.params.imageId);
+        const updatedImageData = {
+            ...req.body,
+            user: req.session.currentUser.id,
+            likedBy: placeholder.likedBy
+        };
+        //console.log(updatedImageData);
         await db.Image.findByIdAndUpdate(
             req.params.imageId, 
-            newImageData, 
+            updatedImageData, 
             {new: true});
         res.redirect(`/images/${req.params.imageId}`);
     }
     catch(err){
         console.log(err);
         req.error = err;
-        return next();
+        res.redirect("/home");
     }
 })
 

@@ -13,26 +13,26 @@
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
                 <div class="top-bar">
                     <div class="display-3 username"><%= thisImage.user.username %> </div>
-                <% if (user) {%>
-                    <% if (user.id === thisImage.user.id) { %>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              options
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="/images/<%=thisImage._id%>/edit">Edit Post</a>
-                                <form method="POST" action="/images/<%=thisImage._id%>?_method=DELETE">
-                                    <button id="show-page-delete" class="btn btn-primary btn-lg">Delete post</button>
-                                </form>
-                            </div>
-                          </div>  
-                    <% } %>
-                <% } %>
+
+                <% if (user.id === thisImage.user.id) { %>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          options
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <button class="dropdown-item" href="/images/<%=thisImage.id%>/edit">Edit Post</button>
+                            <form method="POST" action="/images/<%=thisImage._id%>?_method=DELETE">
+                                <button id="show-page-delete" class="btn btn-primary btn-lg">Delete post</button>
+                            </form>
+                        </div>
+                      </div>  
+                      <% } %>
 
                     <div class="likesText">Likes: <%= thisImage.likes %></div>    
                 
+
                 <% if (user) {%>
-                    <form id="like-btn-form" action="/likes/<%= thisImage.id%>?_method=PUT" method="POST">
+                    <form id="like-btn-form" action="/images/<%= thisImage._id%>?_method=PUT" method="POST">
                         <input 
                             id="like-btn" 
                             type="submit" 
@@ -61,39 +61,23 @@
             name="content" 
             row="3"
             placeholder="New Comment">
+            
+            
         </textarea>
-        <input type="hidden" name="image" id="image" value="<%= thisImage.id%>">
-        <input id="show-comment-btn" type="submit" value="Add Comment"/>     
-</form> 
+        <input id="show-comment-btn" type="submit" value="Add Comment"/>                
                 <ul>
                     <% for( let i = thisComments.length-1; i >= 0 ; i-- ) { %>
                         
-                        <li><div class= "com-top-line">
-                                <img src = <%= thisComments[i].user.profImage%> alt="profile image" class ="comment-profile-image"> 
-                                <div class="commentUser">
-                                    <%=thisComments[i].user.username%>
-                                </div>
-                                <% if (user) { %>                        
-                                    <% if (thisComments[i].user.id === user.id) { %>
-                                        <form method="POST" action="/comments/<%=thisComments[i].id%>?_method=DELETE">
-                                            <input type="image" class="deleteCommentIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/International_tidyman.svg/170px-International_tidyman.svg.png" alt="delete comment"/>
-                                        </form>
-                                       
-                                    <% } %>
-                                <% } %>
-                                
-                            </div>
-                                <%= thisComments[i].content %>
-                            
-                            </li>
+                        <li><img src = <%= thisComments[i].user.profImage%> width="20px" height="20px"> <%= thisComments[i].user.username%>: <%= thisComments[i].content %></li>
+                        
                         <% } %>
                     </ul>
         </div>
 
                 
-               
+                <input type="hidden" name="image" id="image" value="<%= thisImage.id%>">
             </div>
-        
+        </form>
         
 
 
