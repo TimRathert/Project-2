@@ -72,8 +72,8 @@ router.post('/:commentId', async (req, res, next) => {
 // delete comment
 router.delete('/:commentId',async (req, res, next)=>{
     try{
-        const deletedComment = await db.Comment.findById(req.params.commentId);
-        res.redirect(`/images/${deletedComment.image}`)
+        const deleteIt = await db.Comment.findByIdAndDelete(req.params.commentId)
+        res.redirect('back')
     }
     catch(err){
         console.log(err)
