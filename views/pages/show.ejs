@@ -14,6 +14,14 @@
             <div class="content-show">
                 
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
+                <form id="like-btn" action="/images/<%= thisImage._id%>?_method=PUT" method="POST"> 
+                    <button type="submit">♥️</button>
+
+                
+                </form> 
+                
+                
+
                 <input id="like-btn" type="button" value="♥️" class="btn btn-primary btn-lg"/>
                 <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
                 <p>Likes: <%= thisImage.likes %></p>
