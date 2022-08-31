@@ -15,21 +15,21 @@
             <div class="content-show">
                 
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
-
-                <form id="like-btn-form" action="/images/<%= thisImage._id%>?_method=PUT" method="POST">
+                <% if (user) {%>
+                                <form id="like-btn-form" action="/images/<%= thisImage._id%>?_method=PUT" method="POST">
                     <input 
                         id="like-btn" 
                         type="submit" 
                         value="♥️" 
                         class="btn btn-primary btn-lg
-                        <% if (thisImage.likedBy.includes(user.id)) { %>
+                        <% if (thisImage.likedBy.some(obj => obj.id === user.id)) { %>
                             like-btn-liked
                         <% } else { %>
                             like-btn-unliked
                         <% }%>
                         "/>        
                 </form>
-
+                <% } %>
                 <p><%= thisImage.user.username %>: <%= thisImage.description %></p>
                 <p>Likes: <%= thisImage.likes %></p>
                 <button class="edit-show-btn">
