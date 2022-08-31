@@ -40,6 +40,19 @@ router.post('/images', async (req, res, next) => {
     }
 })
 
+// likes
+router.put('/images/:imageId', async (req, res, next)=>{
+    try{
+        const likeIt = await db.Image.findById(req.params.imageId);
+        likeIt.likes = likeIt.likes + 1
+        const updatedLike = await db.Image.findByIdAndUpdate(req.params.imageId, likeIt,{new: true})
+        console.log(updatedLike)
+        res.redirect(`/images/${req.params.imageId}`)
+    }
+    catch(err){
+    console.log(err)}
+})
+
 
 // SHOW ROUTE
 router.get('/images/:imageId', async (req, res, next) => {
@@ -129,9 +142,10 @@ router.get('/about', (req, res) => {
 })
 
 // Popular
-router.get('/popular', (req, res) => {
-    res.render('pages/popular.ejs')
-})
+// router.get('/popular', (req, res) => {
+//     const mostPopular = await db.Popular.findById(req.params.popular)
+//     res.render('pages/popular.ejs')
+// })
 
 //REDIRECT TO HOME
 // router.get('/*', (req,res) => {
