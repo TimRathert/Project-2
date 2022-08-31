@@ -11,7 +11,11 @@ const ImageSchema = new mongoose.Schema (
         user: {
             type: mongoose.Types.ObjectId,
             ref: 'User'
-        }
+        },
+        likedBy: [{
+            type: mongoose.Types.ObjectId,
+            ref: 'User'
+        }]
     },
     { timestamps: true },
 );
