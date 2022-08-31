@@ -86,26 +86,6 @@ router.get('/images/:imageId', async (req, res, next) => {
     }
 })
 
-// PROFILE ROUTE
-router.get('/user/:id', authRequired, async (req, res, next) => {
-    try{
-        const profilePage = await db.User.findById(req.params.id)
-        const userImage = await db.Image.find({user: req.params.id})
-        // console.log(user)
-        const context = {
-            thisPage: profilePage,
-            thisUser: userImage,
-            
-        };
-        res.render('pages/profile.ejs', context)
-    }
-    catch(err){
-        console.log(err);
-        req.error= err;
-        return next()
-    }
-})
-
 
 // INDEX ROUTE
 router.get('/home', async (req, res, next) => {
@@ -127,7 +107,7 @@ router.delete('/images/:imageId', async (req,res, next) => {
     try{
         const deletedImage = await db.Image.findByIdAndDelete(req.params.imageId);
         const deleteComments = await db.Comment.deleteMany({image: deletedImage})
-        console.log(deletedImage, deleteComments);
+        //console.log(deletedImage, deleteComments);
         res.redirect('/home')
     }
     catch(err){
@@ -183,7 +163,7 @@ router.get('/about', (req, res) => {
 router.get('/popular', async (req, res) => {
     try{
         const mostPopular = await db.Image.find({}).sort({likes: -1})  
-        console.log(mostPopular)
+        //console.log(mostPopular)
    
         res.render('pages/popular.ejs',{likes: mostPopular})
     }
