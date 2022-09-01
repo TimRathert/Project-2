@@ -13,9 +13,11 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <ul class="popular-list">
+
         <% for( let i = 0; i < likes.length; i++ ) { %>
-             <img src="<%= likes[i].url%>" alt="image">
+             <<img class="popular-img" src="<%= likes[i].url%>" alt="image">
+             
              <h2>♥️: <%= likes[i].likes %></h2>
         <% } %>
     </ul>
