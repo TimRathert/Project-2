@@ -1,4 +1,4 @@
-<img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png" style="width: 450px; float: right; padding-right: 20px; padding-top: 0px; opacity: 0.2">
+<img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png" style="width: 150px; float: right; padding-right: 20px; padding-top: 0px; opacity: 0.2">
 
 # Instant Gramification
 
