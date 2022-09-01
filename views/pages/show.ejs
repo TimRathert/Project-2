@@ -11,7 +11,7 @@
         <main class="show-body">
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
                 <div class="top-bar">
-                    <div class="display-3 username"><%= thisImage.user.username %> </div>
+                    <div class="display-3 username"><img class= "profile-pic" src="<%=thisImage.user.profImage%>"><%= thisImage.user.username %> </div>
                 <% if (user) {%>
                     <% if (user.id === thisImage.user.id) { %>
                         <div class="dropdown">
