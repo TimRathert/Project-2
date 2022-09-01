@@ -57,7 +57,7 @@ router.get('/:commentId/edit', async (req, res, next)=>{
     }
 })
 // UPDATE COMMENT
-router.post('/:commentId', async (req, res, next) => {
+router.put('/:commentId', async (req, res, next) => {
     try{
         const updatedComment = await db.Comment.findByIdAndUpdate(req.params.commentId, req.body, {new: true})
         //console.log(updatedComment.image)
@@ -72,6 +72,7 @@ router.post('/:commentId', async (req, res, next) => {
 // delete comment
 router.delete('/:commentId',async (req, res, next)=>{
     try{
+        
         const deleteIt = await db.Comment.findByIdAndDelete(req.params.commentId)
         res.redirect('back')
     }

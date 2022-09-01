@@ -1,24 +1,19 @@
-# Project-2
-GA SEIR 725 - Project 2
+<img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png" style="width: 450px; float: right; padding-right: 20px; padding-top: 0px; opacity: 0.2">
 
+# Instant Gramification
 
+Do you ever feel like something is missing in your life?
 
-1) Make your own branch
---> git checkout -b YOUR_NAME
+- [X] Health
+- [X] Happines
+- [X] Friends
+- [X] Family
+- [X] Pets
+- [X] Hobbies
+- [ ] ...?
 
-2) when you push, push to your brance
---> ex: git push origin tim
+Friend, wonder no more. Now you can finally receive the instant gratification your dopamine receptors have been conditioned to expect!
 
-3) go do a pull request on github to merge your branch into development branch
-
-4) once that is done, we can all pull the development branch to our own branches
---> (while on your own branch) git pull origin development
-
-
-WELCOME TO INSTAGRAMIFICATION
-
-this app is a recreation redefining the original app Instagram.
-through instagramification you will be able to upload pictures/comments and edit of your choice.
-
-Our homepage will display pictures, comments AND likes.
-whoever
+* Getting Started
+* Features
+* Contributors

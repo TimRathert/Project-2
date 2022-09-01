@@ -3,7 +3,8 @@ const UserSchema = new mongoose.Schema(
     {
         username: {
             type: String,
-            required: [true, 'You must provide a username']
+            required: [true, 'You must provide a username'],
+            maxLength: 20,
         },
         profImage: {
             type: String,
