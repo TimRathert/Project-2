@@ -25,11 +25,36 @@
     width: 40px;
 }
 
+h1 {
+    text-align: center;
+
+}
+
+img {
+    border-radius: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 a {
-    color: white;
+    color: black;
     transition: color .5s;
     text-decoration: none;
+    font-size: 17px;
 }  
+
+a:hover {
+    color: rgba(255,255,255,0.5)
+}
+
+.navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: linear-gradient(-45deg, white, #0077cd, #0077cd);;
+    background-color: #0077cd;
+    box-shadow: 2px 2px;
+}
   
 .navbar > a:hover {
     color: rgba(255,255,255,0.5)
@@ -60,12 +85,14 @@ body {
 }
 
 #like-btn {
-    background-color: #C9CFC9;
+    background-color: rgba(0,0,0, .25);
     border: none;
     font-size: 50px;
     transition: color .5s, transform .5s;
     margin: -5px;
-    z-index: ;
+    background-color: transparent;
+    outline: none;
+    border: none;
   }
 .like-btn-unliked {
     color: white;
@@ -77,14 +104,14 @@ body {
 .top-bar{
     display: flex;
     justify-content: space-evenly;
-    /* border: 1px solid black; */
     margin-bottom: -10px;
-    overflow: hidden;
-
 }
 
 .profile-pic{
     max-width: 60px;
+    border-radius: 10%;
+    margin-right: 80px;
+    margin-left: 10px;
 }
 
 #show-page-delete{
@@ -103,7 +130,8 @@ body {
 }
 
 #content{
-    width: 100%
+    width: 100%;
+    margin-top: 0px;
 }
 li {
     display: block;
@@ -124,3 +152,34 @@ li {
     height: 15px;
     width: 15px
 }
+
+.com-prof-img {
+    border-radius: 50%;
+}
+
+.display-username {
+    margin-right: 500px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.line {
+    border: 3px solid;
+  }
+
+.new-nav {
+    margin-left: 100px;
+    
+  }
+
+.about-nav {
+    margin-right: 450px;
+  }
+
+.log-nav {
+    margin-right: 30px;
+  }
+ 
+.pop-nav {
+    margin-right: 1px;
+  }
