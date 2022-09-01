@@ -9,13 +9,19 @@
   .image-home {
     padding: 20px;
     border-radius: 20%;
-    transition: height 1s, width 1s;
+    transition: transform .5s;
   }
-
+  @media (min-width:901px) {
   .image-home:hover {
-    height: 25%;
-    width: 25%;
+    transform: scale(1.5);
   }
+}
+
+ @media (max-width:900px) {
+  .image-home:hover {
+    transform: scale(1.1);
+  }
+}
 
   .user-photos {
     transition: height 1s, width 1s;
