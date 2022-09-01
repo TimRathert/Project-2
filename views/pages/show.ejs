@@ -50,8 +50,6 @@
                             </div>
                         </div>
                         <div>
-                            <!-- NEW COMMENT FORM -->
-                            <form action="/comments" method="POST" id="content" class="content-text">
                                 <% if (user) {%>
                                     <% if (user.id === thisImage.user.id) { %>
                                         <div class="dropdown">
@@ -68,6 +66,8 @@
                                     <% } %>
                                 <% } %>
                                 <div>
+                                <!-- NEW COMMENT FORM -->
+                            <form action="/comments" method="POST" id="content" class="content-text">    
                                     <textarea 
                                     id="content" 
                                     name="content" 
