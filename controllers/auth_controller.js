@@ -68,14 +68,6 @@ router.get('/logout', async (req, res, next) => {
     }
 
 })
-// delete account
-
-// router.delete('/login', async (req, res)=>{
-//     try{
-//         const deleteAuth = await db.
-//     }
-
-// })
 
 
 module.exports = router;

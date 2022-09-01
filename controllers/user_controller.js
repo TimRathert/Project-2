@@ -37,6 +37,21 @@ router.get('/:id', authRequired, async (req, res, next) => {
     }
 })
 
+// delete user
+
+router.delete('/:id', authRequired, async (req, res, next)=>{
+    try{
+        const deleteUser = await db.User.deleteUser()
+        console.log(deleteUser);
+    }
+    catch(err){
+        console.log(err)
+        return next()
+    }
+
+})
+
+
 
 
 
