@@ -21,7 +21,7 @@ Friend, wonder no more. Now you can finally receive the instant gratification yo
 
 ## Getting Started
 
----
+Loading the home page
 
 ## User Stories
 
