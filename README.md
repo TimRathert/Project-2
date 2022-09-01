@@ -101,7 +101,7 @@ HTMLCSSJavaScriptMongoDBMongooseNodeJS:
 
 - Joey
 
->
+> I really enjoyed working on the styling of the pages and making each page pop to get the users attention. I learned much more about routes and how they work thanks to my fantastic team explaining them in great detail. 
 
 - Abtulloh
 
