@@ -73,6 +73,7 @@ body {
     animation: gradient 15s ease infinite;
     display: block
   }
+
 .show-body{
         width: 50%;
         margin: 0 auto
@@ -82,6 +83,11 @@ body {
     width: 100%;
     padding: 10px;
     border-radius: 10%;
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
 }
 
 #like-btn {
