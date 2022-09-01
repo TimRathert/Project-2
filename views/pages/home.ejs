@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Homepage</h1>
+    <div class="loader-wrapper">
+        
+    </div>
+    <h1>InstantGramification</h1>
     <div class="homeImages">
         <% for( let i = 0; i<images.length; i++){ %>
             <% const firstImage = images[i] %>
-            <a href="/images/<%=firstImage._id%>"><img class="image-home" src="<%= firstImage.url %>" width="460px"></a> 
-                <button type="button" id="like-btn"  class="btn btn-primary btn-lg">♥️</button>
+            <a href="/images/<%=firstImage._id%>"><img class="image-home" src="<%= firstImage.url %>" width="370px"></a>
+            
             <% } %> 
+            
     </div>
+    
 </body>
 </html>
 
