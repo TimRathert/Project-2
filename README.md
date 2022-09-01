@@ -94,14 +94,18 @@ HTMLCSSJavaScriptMongoDBMongooseNodeJS:
 </details>
 
 <details>
-<summary>Some things we're proud of:</summary>
+<summary>Some things we enjoyed working on and things we learned:</summary>
 - Tim  
 
-> I really enjoyed working on routes and making different data available within each page. 
+> I really enjoyed working on routes and making different data available within each page. I learned a lot about working with databases and collaborative github workflow.
 
 - Joey
 
+>
+
 - Abtulloh
+
+>
 
 </details>
 
