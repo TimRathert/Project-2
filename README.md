@@ -15,5 +15,6 @@ Do you ever feel like something is missing in your life?
 Friend, wonder no more. Now you can finally receive the instant gratification your dopamine receptors have been conditioned to expect!
 
 * Getting Started
+* User Stories
 * Features
 * Contributors
