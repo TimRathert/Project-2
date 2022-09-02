@@ -1,9 +1,39 @@
 
 
-.selector-for-some-widget {
+  .selector-for-some-widget {
     box-sizing: content-box;
   }
+
+
+  .homeImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 320px 0 290px;
+  }
+
+  @media only screen and (max-width: 1230px) {
+    .homeImages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+  }
   
+
+
+  .image-home {
+    padding: 20px;
+    border-radius: 20%;
+    transition: transform .5s;
+  }
+  @media (min-width:901px) {
+  .image-home:hover {
+    transform: scale(1.5);
+  }
+}
+
 
   
 
@@ -255,6 +285,16 @@
     background-color: #0077cd;
     box-shadow: 2px 2px;
     z-index: 1;
+  }
+
+  @media only screen and (max-width: 1267px) {
+    #hamburger-nav {
+      float: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+    }
   }
   
   .navbar-brand{
