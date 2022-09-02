@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
-const UserSchema = new mongoose.SchemaType(
+const UserSchema = new mongoose.Schema(
     {
         username: {
             type: String,
-            required: [true, 'You must provide a username']
+            required: [true, 'You must provide a username'],
+            maxLength: 20,
         },
         profImage: {
             type: String,
@@ -12,7 +13,8 @@ const UserSchema = new mongoose.SchemaType(
         password: {
             type: String,
             required: [true, 'You must provide a password'],
-        }
+            minLength: [3, 'Password must be at least 3 characters']
+        },
     },
     { timestamps: true }
 );

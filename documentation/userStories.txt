@@ -1,7 +1,7 @@
 User Stories:
 
 1) 
-User loads Instagramafication in their browser and is met with images. Attached to each image are a few comments (<3). As the browse pictures, if they see one they like they can 'like' it by clicking the like button. 
+User loads Instagramafication in their browser and is met with images. Attached to each image are a few comments (<3). As they browse pictures, if they see one they like they can 'like' it by clicking the like button. 
 
 If they want to add a comment or see more conversation about an image, they can click on the image and be taken to a show page. 
 

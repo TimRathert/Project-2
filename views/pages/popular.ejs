@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/popularStyle.css">
+    <title>InstantGramification</title>
+    
+</head>
+
+    <title>Document</title>
+</head>
+<body>
+    <ul class="popular-list">
+
+        <% for( let i = 0; i < likes.length; i++ ) { %>
+             <img class="popular-img" src="<%= likes[i].url%>" alt="image">
+             
+             <h2><% if (user) {%>
+                <form id="like-btn-form" action="/likes/<%= likes[i].id %>?_method=PUT" method="POST">
+                    <input 
+                    id="like-btn" 
+                    type="submit" 
+                    value="♥️" 
+                    class="btn btn-primary btn-lg
+                    <% if (likes[i].likedBy.some(obj => obj.id === user.id)) { %>
+                        like-btn-liked
+                        <% } else { %>
+                            like-btn-unliked
+                            <% }%>
+                            "/>
+                        </h2>       
+                        </form>
+                        <% } %>
+       
+                 <%= likes[i].likes %>
+                 <% } %> 
+             
+    </ul>
+</body>
+</html>

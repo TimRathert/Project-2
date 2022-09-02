@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <%- include("../../partials/head") %>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+  </head>  
+  <body>
+    <section>
+      <h1>Login</h1>
+      <div>
+      <main class="container">
+
+        <div class="input-group input-group-lg">
+        <form action="/auth/login" method="POST" class="form">
+
+          <div class="input-group-prepend" id="image-input-one">
+            <label for="url" class="input-group-login">Username</label>
+            <form action="/auth/login" method="POST" class="form">
+            <div>
+              <input
+                name="username"
+                type="text"
+                placeholder="username"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                class="form-control-login"
+              />
+            </div>
+          <div class="input-group input-group-lg" id="image-input-two">
+            <label for="password" class="input-group-login-two">Password</label>
+              <input
+                name="password"
+                type="password"
+                placeholder="******"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-lg" 
+                class="form-control-login-two"
+              />
+          </div>
+        
+          
+            <div>
+              <button id="login-button" class="btn button btn-primary btn-lg">Submit</button>
+            </div>
+          
+          <div class="register">Need an account? <a href="/auth/register"> Click here!</a> </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</section>
+</html>
