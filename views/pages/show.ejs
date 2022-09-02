@@ -11,12 +11,14 @@
     <body>
         <h1>
             <a href="/user/<%= thisImage.user.id %>">
-            <img class="profile-pic-top" src='<%= thisImage.user.profImage %>'height='60px' width="60px">
+            <img class="profile-pic-top" src='<%= thisImage.user.profImage %>'>
         </a>
             <%= thisImage.user.username %>
         </h1>
+
         <p>POST</p>
         <hr>
+
         <main class="show-body">
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
                 <div class="top-bar">

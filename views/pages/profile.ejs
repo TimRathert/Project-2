@@ -12,13 +12,13 @@
 <body class="profile">
    <p class= 'username'><%= thisPage.username %></p>
    <p>
-    <img class= 'profile-photo' src= '<%= thisPage.profImage %>'height="100px" width="100px">
+    <img class= 'profile-photo' src= '<%= thisPage.profImage %>'>
 </p>
 <hr class="line">
 <p class="photos-main"> 
     <% for (let i = 0; i < thisUser.length; i++) { %>
     <% const myImages = thisUser[i] %>
-    <a href='/images/<%= myImages._id %>'><img class = 'user-photos' src= '<%= myImages.url %>'height= '200px' width= '200px' alt='image'></a>
+    <a href='/images/<%= myImages._id %>'><img class = 'user-photos' src= '<%= myImages.url %>' alt='image'></a>
     <% } %>
 </p>
    
