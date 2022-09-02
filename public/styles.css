@@ -26,16 +26,15 @@
   .image-home {
     padding: 20px;
     border-radius: 20%;
-    transition: transform .5s;
+    transition: scale .5s;
   }
   @media (min-width:901px) {
   .image-home:hover {
-    transform: scale(1.5);
+    scale: 1.05;
+    z-index: 1;
   }
 }
 
-
-  
 
   body {
     background-color: #C9CFC9;

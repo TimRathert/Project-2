@@ -15,9 +15,11 @@ body{
     border-bottom: 5px solid rgba(0,0,0,0.5);
     min-height: 250px;
     padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-radius: 10px;
     margin-bottom: 10px;
-    transition: color .5s, border .5s;
+    transition: color .5s, border .5s, scale .5s;
 }
 .cardProfImage{
     max-width: 30px;
