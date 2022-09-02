@@ -67,9 +67,9 @@ body{
       text-decoration: none;
   }  
     
-   a:hover {
+   /* a:hover {
       color: rgba(255,255,255,0.5);
-  }
+  } */
 
   .line {
     border: 3px solid;
@@ -134,5 +134,22 @@ body{
 
   }
 
- 
-  
+  .pop-nav:hover {
+    color:rgb(104, 104, 104); 
+  }
+
+  .log-nav:hover {
+    color:rgb(104, 104, 104);
+  }
+
+  .user-nav:hover {
+    color: rgb(104, 104, 104);
+  }
+
+  .about-nav:hover {
+    color: rgb(104, 104, 104);
+  }
+
+  .new-nav:hover {
+    color: rgb(137, 137, 137); 
+  }
