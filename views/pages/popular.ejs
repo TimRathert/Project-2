@@ -16,10 +16,28 @@
     <ul class="popular-list">
 
         <% for( let i = 0; i < likes.length; i++ ) { %>
-             <<img class="popular-img" src="<%= likes[i].url%>" alt="image">
+             <img class="popular-img" src="<%= likes[i].url%>" alt="image">
              
-             <h2>♥️: <%= likes[i].likes %></h2>
-        <% } %>
+             <h2><% if (user) {%>
+                <form id="like-btn-form" action="/likes/<%= likes[i].id %>?_method=PUT" method="POST">
+                    <input 
+                    id="like-btn" 
+                    type="submit" 
+                    value="♥️" 
+                    class="btn btn-primary btn-lg
+                    <% if (likes[i].likedBy.some(obj => obj.id === user.id)) { %>
+                        like-btn-liked
+                        <% } else { %>
+                            like-btn-unliked
+                            <% }%>
+                            "/>
+                        </h2>       
+                        </form>
+                        <% } %>
+       
+                 <%= likes[i].likes %>
+                 <% } %> 
+             
     </ul>
 </body>
 </html>
