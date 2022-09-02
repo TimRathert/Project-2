@@ -13,6 +13,7 @@ const mainController = require(`./controllers/mainController.js`);
 const commentController = require(`./controllers/commentController.js`);
 const auth_controller = require(`./controllers/auth_controller.js`);
 const user_controller = require(`./controllers/user_controller.js`);
+const { db } = require('./models/User');
 
 // CONFIGS
 const app = express();
@@ -52,8 +53,6 @@ app.use('/', mainController)
 app.use('/comments', authRequired, commentController);
 app.use('/auth', auth_controller);
 app.use('/user', user_controller);
-
-
 
 // 
 app.listen(PORT,() => console.log(`Listening on port: ${PORT}`));

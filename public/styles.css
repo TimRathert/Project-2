@@ -1,3 +1,5 @@
+
+
 .selector-for-some-widget {
     box-sizing: content-box;
   }
@@ -279,6 +281,7 @@
     background: linear-gradient(-45deg, white, #0077cd, #0077cd);;
     background-color: #0077cd;
     box-shadow: 2px 2px;
+    z-index: 1;
   }
   
   .navbar-brand{
@@ -370,3 +373,5 @@
  .pop-nav {
     margin-right: 1px;
   }
+
+  
