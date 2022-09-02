@@ -3,27 +3,9 @@
 .selector-for-some-widget {
     box-sizing: content-box;
   }
-
-  .homeImages {
-    margin: 0 300px 0 330px;
-  }
   
-  .image-home {
-    padding: 20px;
-    border-radius: 20%;
-    transition: transform .5s;
-  }
-  @media (min-width:901px) {
-  .image-home:hover {
-    transform: scale(1.5);
-  }
-}
 
- @media (max-width:900px) {
-  .image-home:hover {
-    transform: scale(1.1);
-  }
-}
+  
 
   body {
     background-color: #C9CFC9;
@@ -304,7 +286,7 @@
    a:hover {
       color: rgba(255,255,255,0.5);
   }
-    
+
   .logIn:active {
     box-shadow: 0 5px rgb(124, 128, 127);
     transform: translateY(4px);
@@ -373,4 +355,3 @@
     margin-right: 1px;
   }
 
-  
