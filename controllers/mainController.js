@@ -1,5 +1,5 @@
 // DEPENDENCIES
-const { Router } = require('express');
+const { Router, query } = require('express');
 const express = require('express');
 const router = express.Router();
 const db = require('../models')
@@ -92,11 +92,29 @@ router.get('/images/:imageId', async (req, res, next) => {
 // INDEX ROUTE
 router.get('/home', async (req, res, next) => {
     try{
+        const type = req.query.sort;
+        let sort = {} || '';
+        let direction = req.query.direction;
+        sort[type] = direction;
+        //console.log(sort)
         const allImages = await db.Image.find({})
-        .populate('user')
-        .populate('likedBy')
-        .exec()
-        let context = {images: allImages}
+            .sort(sort)
+            .populate('user')
+            .populate('likedBy')
+            .exec()
+           
+        const current = parseInt(req.query.start) || 0
+        
+        const prev = current - 6 >= 0 ? current-6 : 0;
+        const next = current + 6 < allImages.length ? current+6 : allImages.length
+        
+        let context = {
+            images: allImages.slice(current, next) || [],
+            previous: prev,
+            next: next,
+            length: allImages.length
+        }
+        //console.log()
         res.render('pages/home.ejs', context)
     }
     catch(err){
@@ -105,6 +123,10 @@ router.get('/home', async (req, res, next) => {
         return next();
     }
 })
+
+
+
+
 
 // DESTROY
 router.delete('/images/:imageId', async (req,res, next) => {
@@ -167,7 +189,7 @@ router.get('/about', (req, res) => {
 // Popular
 router.get('/popular', async (req, res) => {
     try{
-        const mostPopular = await db.Image.find({}).sort({likes: -1})  
+        const mostPopular = await db.Image.find({}).sort({likes: -1})
         //console.log(mostPopular)
    
         res.render('pages/popular.ejs',{likes: mostPopular})
