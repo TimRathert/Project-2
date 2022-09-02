@@ -90,12 +90,6 @@ p {
     font-size: 30px;
 }
 
-.likesText {
-    padding-left: 600px;
-    font-weight: bolder;
-    
-}
-
 #like-btn {
     background-color: rgba(0,0,0, .25);
     border: none;
@@ -114,7 +108,7 @@ p {
 
 .likesNum {
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 600px;
 }
 
 .top-bar{
