@@ -15,6 +15,7 @@
         </a>
             <%= thisImage.user.username %>
         </h1>
+        <hr>
 
         <main class="show-body">
                 <img class= "show-page-image" src = "<%= thisImage.url %>">
@@ -24,7 +25,10 @@
                         <img class= "profile-pic" src="<%=thisImage.user.profImage%>"></a><%= thisImage.user.username %> 
                     </div>
                     
-                    <div class="likesText"></div>   
+                    
+                
+                        
+        
                     
                     <p class="likesNum"><%= thisImage.likes %> </p>
                     
@@ -54,7 +58,7 @@
                                     <% if (user.id === thisImage.user.id) { %>
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                              options
+                                              Options
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="/images/<%=thisImage._id%>/edit">Edit Post</a>

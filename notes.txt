@@ -25,4 +25,11 @@ Thursday >> Stretch goals
 
 
 
+
+.display-username .likesNum .likes-btn-frm {
+     display: flex;
+     justify-content: center;
+     margin: 0;
+     font: 10px;
+    }
   
