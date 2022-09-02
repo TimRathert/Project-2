@@ -23,15 +23,6 @@
   }
 }
 
-  .user-photos {
-    transition: height 1s, width 1s;
-  }
-
-  .user-photos:hover {
-    height: 16%;
-    width: 16%;
-  }
-
   body {
     background-color: #C9CFC9;
     background: linear-gradient(-45deg, white, white, white, white, #0077cd);
@@ -335,6 +326,7 @@
 
   .profile-photo {
     border-radius: 10%;
+    max-width: 100px;
     
   }
 
@@ -343,7 +335,14 @@
     display: inline-block;
     margin-right: 2%; 
     margin-top: 5%;
+    transition: scale 1s;
+    max-width: 200px
   }
+
+  .user-photos:hover {
+    scale: 1.2;
+  }
+
 
   .profile {
     text-align: center;
