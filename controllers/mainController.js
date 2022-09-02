@@ -56,7 +56,9 @@ router.put('/likes/:imageId', authRequired, async (req, res, next)=>{
         const updatedLike = await db.Image.findByIdAndUpdate(req.params.imageId, likeIt,{new: true})
         //console.log(updatedLike)
         
+
         res.redirect(`back`)
+
     }
     catch(err){
     console.log(err)}
