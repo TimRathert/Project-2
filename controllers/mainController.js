@@ -56,7 +56,7 @@ router.put('/likes/:imageId', authRequired, async (req, res, next)=>{
         const updatedLike = await db.Image.findByIdAndUpdate(req.params.imageId, likeIt,{new: true})
         //console.log(updatedLike)
         
-        res.redirect(`/images/${req.params.imageId}`)
+        res.redirect(`back`)
     }
     catch(err){
     console.log(err)}
@@ -91,6 +91,9 @@ router.get('/images/:imageId', async (req, res, next) => {
 router.get('/home', async (req, res, next) => {
     try{
         const allImages = await db.Image.find({})
+        .populate('user')
+        .populate('likedBy')
+        .exec()
         let context = {images: allImages}
         res.render('pages/home.ejs', context)
     }
