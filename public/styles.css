@@ -1,9 +1,11 @@
+
+
 .selector-for-some-widget {
     box-sizing: content-box;
   }
 
   .homeImages {
-    margin-left: 140px;
+    margin: 0 300px 0 330px;
   }
   
   .image-home {
@@ -57,7 +59,7 @@
   #description.form-control {
     background-color: white;
     height: 200px;
-    color: white;
+    color: black;
     font-size: 40px;
     width: 20%;
   }
@@ -65,7 +67,7 @@
   #url.form-control {
     background-color: white;
     height: 200px;
-    color: white;
+    color: black;
     font-size: 40px;
     width: 100%;
   }
@@ -187,8 +189,7 @@
   .likesText {
     padding-left: 600px;
     font-weight: bolder;
-    
-}
+  }
 
   #like-btn:active {
     transform: rotate(0.5turn);
@@ -217,7 +218,6 @@
   .input-group-login {
     width: 80%;
     text-align: center;
-    margin-left: 30px;
   }
 
   .form-control-login-two {
@@ -272,6 +272,7 @@
     background: linear-gradient(-45deg, white, #0077cd, #0077cd);;
     background-color: #0077cd;
     box-shadow: 2px 2px;
+    z-index: 1;
   }
   
   .navbar-brand{
@@ -371,3 +372,5 @@
  .pop-nav {
     margin-right: 1px;
   }
+
+  
