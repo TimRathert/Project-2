@@ -383,14 +383,35 @@
     
   }
 
+  .new-nav:hover {
+    color: rgb(137, 137, 137); 
+  }
+
   .about-nav {
     margin-right: 450px;
+  }
+
+  .about-nav:hover {
+    color: rgb(104, 104, 104);
   }
 
   .log-nav {
     margin-right: 30px;
   }
- .pop-nav {
+
+  .log-nav:hover {
+    color:rgb(104, 104, 104);
+  }
+
+  .user-nav:hover {
+    color: rgb(104, 104, 104);
+  }
+ 
+  .pop-nav {
     margin-right: 1px;
+  }
+
+  .pop-nav:hover {
+    color:rgb(104, 104, 104); 
   }
 

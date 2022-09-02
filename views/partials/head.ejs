@@ -11,9 +11,9 @@
         </a>
       <% if (user) { %>
         <a id="hamburger-nav" class="new-nav" href="/images/new">Add New Post</a>
-        <a id="hamburger-nav" href="/popular">Popular Posts</a>
+        <a id="hamburger-nav" class="pop-nav" href="/popular">Popular Posts</a>
         <a id="hamburger-nav" class="about-nav" href="/about">About</a> 
-        <a id="hamburger-nav" href="/user/<%= user.id %>">My Account</a> 
+        <a id="hamburger-nav" class="user-nav" href="/user/<%= user.id %>">My Account</a> 
         <a id="hamburger-nav" class="log-nav" href="/auth/logout">Logout</a>
       <% } else { %>
            
