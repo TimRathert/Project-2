@@ -10,16 +10,16 @@
           <img src="https://i.im.ge/2022/08/29/Otd9AW.apple-camera.png">InstantGramification
         </a>
       <% if (user) { %>
-        <a class="new-nav" href="/images/new">Add New Post</a>
-        <a href="/popular">Popular Posts</a>
-        <a class="about-nav" href="/about">About</a> 
-        <a href="/user/<%= user.id %>">My Account</a> 
-        <a class="log-nav" href="/auth/logout">Logout</a>
+        <a id="hamburger-nav" class="new-nav" href="/images/new">Add New Post</a>
+        <a id="hamburger-nav" href="/popular">Popular Posts</a>
+        <a id="hamburger-nav" class="about-nav" href="/about">About</a> 
+        <a id="hamburger-nav" href="/user/<%= user.id %>">My Account</a> 
+        <a id="hamburger-nav" class="log-nav" href="/auth/logout">Logout</a>
       <% } else { %>
            
-        <a class='pop-nav' href="/popular">Popular Posts</a>
-        <a class='about-nav' href="/about">About</a> <%=  %>
-        <a class='log-nav' href="/auth/login">Log In/Register</a>
+        <a id="hamburger-nav" class='pop-nav' href="/popular">Popular Posts</a>
+        <a id="hamburger-nav" class='about-nav' href="/about">About</a> <%=  %>
+        <a id="hamburger-nav" class='log-nav' href="/auth/login">Log In/Register</a>
         <% }%>
 
         

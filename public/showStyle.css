@@ -54,6 +54,7 @@ a:hover {
     background: linear-gradient(-45deg, white, #0077cd, #0077cd);;
     background-color: #0077cd;
     box-shadow: 2px 2px;
+    z-index: 1;
 }
   
 .navbar > a:hover {
@@ -117,6 +118,17 @@ p {
     margin-bottom: -10px;
     align-items: center;
 }
+
+@media only screen and (max-width: 1600px) {
+    .top-bar .likesNum {  
+        text-align: center;
+        width: 20%;
+        height: 50%;
+        display: inline-block;
+        margin: 0;
+       
+  }
+ }
 
 .profile-pic-top {
     transition: height 1s, width 1s;
@@ -211,6 +223,15 @@ li {
   }
 
   #dropdownMenuButton {
-    margin-left: 428px;
-    margin-top: -205px;
+    float: right;
+  }
+
+  @media only screen and (max-width: 1267px) {
+    #hamburger-nav {
+      float: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: 0;
+    }
   }
