@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // MONGODB PATH
-mongoURI = process.env.MONGODB_URI;
+mongoURI = process.env.MONGODB_URI || "mongodb+srv://timrathert:1millionwatts@sei.fletbqb.mongodb.net/?retryWrites=true&w=majority";
 // ^ HERE ^
 
 mongoose.connect(mongoURI);
