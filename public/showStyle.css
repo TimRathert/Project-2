@@ -75,7 +75,7 @@ body {
   }
 
 .show-body{
-        width: 50%;
+        width: 40%;
         margin: 0 auto
 }
 
@@ -88,12 +88,6 @@ body {
 p {
     text-align: center;
     font-size: 30px;
-}
-
-.likesText {
-    padding-left: 600px;
-    font-weight: bolder;
-    
 }
 
 #like-btn {
@@ -114,7 +108,7 @@ p {
 
 .likesNum {
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 600px;
 }
 
 .top-bar{
@@ -125,12 +119,12 @@ p {
 }
 
 .profile-pic-top {
-    transition: height 1s, width 1s;
+    max-width: 60px;
+    transition: scale 1s;
 }
 
 .profile-pic-top:hover {
-    height: 5%;
-    width: 5%;
+    scale: 1.2
 }
 
 .profile-pic{

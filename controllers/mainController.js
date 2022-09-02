@@ -174,9 +174,9 @@ router.get('/popular', async (req, res) => {
 })
 
 //REDIRECT TO HOME
-// router.get('/*', (req,res) => {
-//     res.redirect('/home');
-// })
+router.get('/', (req,res) => {
+    res.redirect('/home');
+})
 
 
 module.exports = router
