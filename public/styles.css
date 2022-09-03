@@ -286,7 +286,7 @@
     z-index: 1;
   }
 
-  @media only screen and (max-width: 1267px) {
+  @media only screen and (max-width: 1230px) {
     #hamburger-nav {
       float: none;
       width: 100%;
@@ -393,4 +393,13 @@
  .pop-nav {
     margin-right: 1px;
   }
+.smallBar{
+  margin-left: 30px;
+}
+.smallButtonMenu{
+  background-color: rgba(0, 119, 205, 0.3) !important;
 
+}
+.smallBarLogo{
+  width: 50px;
+}

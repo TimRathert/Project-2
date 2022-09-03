@@ -236,3 +236,9 @@ li {
     }
   }
 
+  .smallBar{
+    margin-left: 30px;
+  }
+  .smallBarLogo{
+    width: 50px;
+  }
