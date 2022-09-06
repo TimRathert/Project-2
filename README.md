@@ -138,4 +138,4 @@ HTMLCSSJavaScriptMongoDBMongooseNodeJS:
 - [ ] Ability to edit a user's profile picture
 - [ ] The ability to follow other users and have a uniquely curated homepage of their content.
 - [ ] Functionality to message other users privately
-
+- [ ] Search posts by image description content
