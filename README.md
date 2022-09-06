@@ -76,6 +76,20 @@ If a user navigates to a page containing an image or a comment that they have su
 ---
 
 <details>
+<summary>Screenshots</summary>
+<img src ="./assets/homepage.jpg" alt="Homepage" width="300px"/>
+<img src ="./assets/homepage2.jpg" alt="Homepage resized" width="300px"/>
+<img src ="./assets/login.jpg" alt="Login Page" width="300px"/>
+<img src ="./assets/mostpopular.jpg" alt="Most Popular Posts" width="300px"/>
+<img src ="./assets/post1.jpg" alt="Example Post Page" width="300px"/>
+<img src ="./assets/newpost.jpg" alt="Create Post Page" width="300px"/>
+<img src ="./assets/profile1.jpg" alt="Example Profile Page" width="300px"/>
+<img src ="./assets/filestructure.jpg" alt="File Structure" width="300px"/>
+<img src ="./assets/homecode.jpg" alt="Snippet of code to sort posts on homepage" width="300px"/>
+<img src ="./assets/editdropdowncode.jpg" alt="Code to toggle visibility of dropdown with post edit functionality" width="300px"/>
+</details>
+
+<details>
 <summary>Technology Used </summary>
 
 HTMLCSSJavaScriptMongoDBMongooseNodeJS:
@@ -120,4 +134,8 @@ HTMLCSSJavaScriptMongoDBMongooseNodeJS:
 
 
 ## Next Steps
+
+- [ ] Ability to edit a user's profile picture
+- [ ] The ability to follow other users and have a uniquely curated homepage of their content.
+- [ ] Functionality to message other users privately
 
