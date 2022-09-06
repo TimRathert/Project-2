@@ -53,9 +53,9 @@
                                 <%= thisImage.description %>
                             </div>
                         </div>
-                        <div>
-                                <% if (user) {%>
-                                    <% if (user.id === thisImage.user.id) { %>
+                        <div>   
+                                <% if (user) {%>  <%# If the user is logged in...%>
+                                    <% if (user.id === thisImage.user.id) { %> <%# ...and that user made the current post, show the edit functions %>
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                               Options
