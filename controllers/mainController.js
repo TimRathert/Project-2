@@ -89,7 +89,7 @@ router.get('/images/:imageId', async (req, res, next) => {
 })
 
 
-// INDEX ROUTE
+// INDEX ROUTE - Homepage sort & paginate functionality
 router.get('/home', async (req, res, next) => {
     try{
         const type = req.query.sort;
