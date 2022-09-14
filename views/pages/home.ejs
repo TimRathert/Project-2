@@ -15,9 +15,10 @@
     </div>
     <h1>InstantGramification</h1>
     <nav class="pagination" role="navigation" aria-label="Pagination">
+       
         <% if (next > 6) { %>
 
-        <a href="?start=<%=previous%>">
+        <a href="<%=urlSort%>start=<%=previous%>">
             <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
                 Back
             </button>
@@ -26,7 +27,7 @@
             <% if (next < length) { %>
              
             
-        <a href="?start=<%=next%>">
+        <a href="<%=urlSort%>start=<%=next%>">
             <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
                 Next
             </button>
@@ -83,20 +84,20 @@
     <nav class="pagination" role="navigation" aria-label="Pagination">
         <% if (next > 6) { %>
 
-        <a href="?start=<%=previous%>">
-            <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
-                Back
-            </button>
-        </a>
-        <% } %>
-            <% if (next < length) { %>
-             
-            
-        <a href="?start=<%=next%>">
-            <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
-                Next
-            </button>
-        </a>  
+            <a href="<%=urlSort%>start=<%=previous%>">
+                <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+                    Back
+                </button>
+            </a>
+            <% } %>
+                <% if (next < length) { %>
+                 
+                
+            <a href="<%=urlSort%>start=<%=next%>">
+                <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+                    Next
+                </button>
+            </a>    
         <% } %>
     </nav>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

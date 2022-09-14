@@ -78,7 +78,7 @@ router.get('/images/:imageId', async (req, res, next) => {
         thisImage: image,
         thisComments: comments,
     };
-
+    
     res.render('pages/show.ejs', context)
 
     } catch(err){
@@ -102,19 +102,30 @@ router.get('/home', async (req, res, next) => {
             .populate('user')
             .populate('likedBy')
             .exec()
-           
+        
         const current = parseInt(req.query.start) || 0
         
         const prev = current - 6 >= 0 ? current-6 : 0;
         const next = current + 6 < allImages.length ? current+6 : allImages.length
-        
+        let url = '';
+        if (req.query.sort == undefined){
+            url = '?'
+        }
+        else{ 
+            url = `?sort=${req.query.sort}&direction=${req.query.direction}&`
+        }
+        //console.log(req.query.sort === undefined)
+        //console.log(url)
+
         let context = {
             images: allImages.slice(current, next) || [],
             previous: prev,
             next: next,
-            length: allImages.length
+            length: allImages.length,
+            urlSort: url,
         }
-        //console.log()
+        
+        
         res.render('pages/home.ejs', context)
     }
     catch(err){
