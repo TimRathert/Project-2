@@ -24,7 +24,7 @@ Well, friend, wonder no longer. The dopamine itch your brain has been conditione
 
 ---
 
-1. Navigate here (insert link to deployment)
+1. Navigate here https://instant-gramifictation.herokuapp.com/home
 2. Browse!
 
 <details>
